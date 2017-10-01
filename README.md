@@ -1,26 +1,28 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# 🏨 Hotelz app 🏨
+This is a hybrid mobile application that was developed in ionic 2 for _desarrollo de aplicaciones empresariales_ course.
 
-## How to use this template
-
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
+## 🔧 Requirements
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ npm -v
+3.10.10
+
+$ ionic -v
+3.12.0
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+## 📦 Installation
+```git
+git clone https://github.com/yoinergomez/dae_hotelz_ionic.git
+cd dae_hotelz_ionic
+npm install
 ```
 
-Substitute ios for android if not on a Mac.
 
+## 💻 Developers team
+Jhonatan Alexánder Orozco Blandón  
+Maria Camila Gómez Restrepo  
+Frank Alexis Castrillón Giraldo   
+Yoiner Esteban Gómez Ayala
+
+### References
+https://github.com/ionic-team/ionic-unit-testing-example
