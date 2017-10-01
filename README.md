@@ -2,6 +2,7 @@
 This is a hybrid mobile application that was developed in ionic 2 for _desarrollo de aplicaciones empresariales_ course.
 
 ## 🔧 Requirements
+That version or above
 ```bash
 $ npm -v
 3.10.10
@@ -24,5 +25,5 @@ Maria Camila Gómez Restrepo
 Frank Alexis Castrillón Giraldo   
 Yoiner Esteban Gómez Ayala
 
-### References
+### 📌 References
 https://github.com/ionic-team/ionic-unit-testing-example
