@@ -16,14 +16,15 @@ $ ionic -v
 git clone https://github.com/yoinergomez/dae_hotelz_ionic.git
 cd dae_hotelz_ionic
 npm install
+ionic serve
 ```
 
 
 ## 💻 Developers team
-Jhonatan Alexánder Orozco Blandón  
-Maria Camila Gómez Restrepo  
-Frank Alexis Castrillón Giraldo   
-Yoiner Esteban Gómez Ayala
+- Jhonatan Alexánder Orozco Blandón :octocat: [@jhonatorozco](https://github.com/jhonatorozco)
+- Maria Camila Gómez Restrepo :octocat: [@camigomez35](https://github.com/camigomez35)
+- Frank Alexis Castrillón Giraldo :octocat: [@frankalexis](https://github.com/frankalexis)  
+- Yoiner Esteban Gómez Ayala :octocat: [@yoinergomez](https://github.com/yoinergomez)
 
 ### 📌 References
 https://github.com/ionic-team/ionic-unit-testing-example
