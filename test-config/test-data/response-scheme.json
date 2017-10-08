@@ -1,0 +1,27 @@
+{
+    "hotel_id": "string",
+    "hotel_name": "string",
+    "hotel_thumbnail": "string",
+    "hotel_location": {
+        "address": "string",
+        "lat": "string",
+        "long": "string"
+    },
+    "check_in": "string",
+    "check_out": "string",
+    "hotel_website": "string",
+    "rooms": [
+        {
+            "room_type": "string",
+            "capacity": "number",
+            "price": "number",
+            "currency": "string",
+            "room_thumbnail": "string",
+            "description": "string",
+            "beds": {
+                "simple": "number",
+                "double": "number"
+            }
+        }
+    ]
+}

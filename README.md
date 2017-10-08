@@ -26,4 +26,5 @@ Frank Alexis Castrillón Giraldo
 Yoiner Esteban Gómez Ayala
 
 ### 📌 References
-https://github.com/ionic-team/ionic-unit-testing-example
+https://github.com/ionic-team/ionic-unit-testing-example  
+https://www.json-generator.com/

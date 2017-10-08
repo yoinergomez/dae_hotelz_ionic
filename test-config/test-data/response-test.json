@@ -1,0 +1,611 @@
+[
+    {
+      "hotel_id": "59d986348effb8e507566367",
+      "hotel_name": "ANARCO",
+      "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel1.jpg",
+      "hotel_location": {
+        "address": "456 Granite Street, Olney, Indiana, 8288",
+        "lat": -48.766897,
+        "long": -24.290344
+      },
+      "check_in": "12:05",
+      "check_out": "05:23",
+      "hotel_website": "http://www.ANARCO.com",
+      "rooms": [
+        {
+          "room_type": "lujosa",
+          "capacity": 2,
+          "price": "$196,302",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Elit cillum ea consectetur nisi irure nisi sint sunt velit eu pariatur reprehenderit sint. Anim velit do exercitation incididunt dolor proident aute esse cupidatat excepteur proident. Magna sint do officia eu cupidatat dolore excepteur. Proident adipisicing commodo amet enim consectetur qui sunt officia aliquip fugiat ullamco in nulla nisi.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$161,808",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Non exercitation dolor magna in. Culpa cupidatat enim exercitation laborum minim labore consequat amet sint dolor reprehenderit deserunt. Sint elit quis exercitation qui veniam excepteur nostrud reprehenderit. Pariatur ad ullamco aliqua amet deserunt cillum non enim nostrud. Nisi nulla qui consectetur veniam. Aliquip ullamco sint excepteur eu officia ut elit cupidatat Lorem minim.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 5,
+          "price": "$70,848",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Dolore tempor sint ea in ea enim eu sint dolore velit duis. Tempor nostrud et anim officia. Enim cupidatat esse qui occaecat excepteur minim nostrud consectetur pariatur fugiat aliquip non. Eu et labore reprehenderit nulla incididunt.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$239,645",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Ex pariatur anim ipsum aute quis anim aliquip deserunt voluptate esse sunt. Veniam id esse do ipsum minim fugiat cillum. Veniam aute et sint aliquip dolore exercitation labore consectetur fugiat id. Incididunt aliquip velit aliquip culpa commodo ea id commodo.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 2,
+          "price": "$142,378",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Duis nulla laboris proident proident. Fugiat est et excepteur et exercitation in exercitation aute nulla voluptate et. Id adipisicing mollit ullamco id sit ipsum velit laborum ad nostrud amet laborum. Ex deserunt consequat voluptate consequat laborum aliquip eiusmod labore esse dolor anim anim commodo.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 5,
+          "price": "$50,362",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Cupidatat nostrud elit commodo proident et ullamco. Dolore proident sit proident dolore exercitation est ut reprehenderit reprehenderit minim. Id nulla ad labore quis in fugiat est voluptate consectetur dolore nisi tempor. Est Lorem reprehenderit sit proident amet nostrud exercitation eiusmod Lorem elit. Qui elit anim commodo dolor aute consectetur. Velit est irure ullamco fugiat Lorem labore nulla laborum cupidatat do tempor excepteur consequat.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 5,
+          "price": "$244,154",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Quis voluptate consequat qui consequat do quis magna duis Lorem adipisicing. Exercitation dolore aliqua laborum id sit. Id adipisicing ad nisi elit fugiat ea elit anim deserunt anim. Veniam est reprehenderit ipsum sit nulla id cillum dolore sint. Occaecat magna dolor in eiusmod fugiat aliquip laboris et exercitation veniam anim reprehenderit ut. Non est aliqua ea amet occaecat eiusmod cupidatat commodo veniam.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 5,
+          "price": "$116,882",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Aliqua quis ea adipisicing exercitation culpa labore. Enim ea aute exercitation dolor velit consequat eu aute enim quis adipisicing esse. Eiusmod sit qui pariatur est amet esse irure aliquip ad laborum. Esse consectetur sint pariatur non esse magna qui excepteur voluptate consequat est et. Non consequat deserunt ex ut ullamco irure voluptate. Sint sint dolor est Lorem Lorem consequat tempor in velit officia laborum ad in pariatur.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 2,
+          "price": "$135,306",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Occaecat aliqua veniam Lorem nulla sit ad laboris. Aliquip labore eu dolore veniam laboris. Adipisicing id elit velit do consectetur commodo non velit ipsum deserunt pariatur dolor consectetur. Do deserunt culpa proident ad do quis Lorem. Officia officia Lorem magna adipisicing velit proident nostrud pariatur. Ut consequat mollit duis Lorem nulla laborum velit proident nulla.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 1,
+          "price": "$238,037",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Eiusmod in ad nostrud et. Et enim id tempor tempor cillum. Aute dolore incididunt ea Lorem quis excepteur cupidatat consectetur do in. Aliquip sint eiusmod non elit anim aliquip sunt elit sit proident adipisicing aliquip incididunt. Dolor aute duis mollit aliquip aute fugiat qui pariatur dolore.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 1
+          }
+        }
+      ]
+    },
+    {
+      "hotel_id": "59d98634d2054ead01f0bdb9",
+      "hotel_name": "PYRAMAX",
+      "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel2.jpg",
+      "hotel_location": {
+        "address": "194 Navy Street, Ticonderoga, Minnesota, 4585",
+        "lat": 3.246303,
+        "long": 162.523506
+      },
+      "check_in": "04:35",
+      "check_out": "06:28",
+      "hotel_website": "http://www.PYRAMAX.com",
+      "rooms": [
+        {
+          "room_type": "lujosa",
+          "capacity": 1,
+          "price": "$199,692",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Ipsum deserunt ex in incididunt irure. Nostrud et amet sit aliquip. In adipisicing eu deserunt reprehenderit voluptate adipisicing incididunt incididunt sit dolore minim. Incididunt consectetur minim irure amet est sunt cillum voluptate duis.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$246,425",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Occaecat deserunt labore magna mollit ut id deserunt culpa labore. Ex irure ad aute exercitation ea Lorem irure. Esse nisi exercitation enim fugiat aute adipisicing non aliqua incididunt deserunt nostrud cillum tempor nostrud.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 4,
+          "price": "$53,943",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Laborum nisi pariatur velit et magna dolore velit veniam id nostrud aliqua. Cupidatat exercitation sunt qui eu sit id deserunt nostrud aliquip anim laborum. Commodo nulla duis aliquip dolor consequat aliqua ex amet ad nulla ullamco.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$188,620",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Sit sint laborum laborum minim ea culpa laboris laboris dolore labore. Laboris est irure laboris et dolor in in. Anim laborum id velit minim et mollit esse deserunt. Ullamco in adipisicing quis consequat ullamco aute incididunt dolor culpa sint non cillum non. Anim sit ad culpa duis consectetur deserunt sunt irure officia. Cupidatat pariatur anim aliquip eu quis officia in.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 2,
+          "price": "$178,004",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Cillum duis officia amet tempor duis ut nulla dolor mollit mollit adipisicing aute ullamco. Eiusmod reprehenderit laborum qui do amet incididunt. Irure magna proident officia est eu elit est cupidatat et sint laborum.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 3,
+          "price": "$234,549",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Cillum laboris id culpa anim nulla ullamco consectetur cupidatat. Proident sint mollit enim proident elit incididunt officia magna tempor irure. Ut aliqua exercitation proident aute commodo occaecat et excepteur nostrud excepteur aute commodo. Labore reprehenderit cillum ad laborum ipsum. Elit id esse proident veniam et officia non ut. Do id reprehenderit consectetur voluptate consequat dolore.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$69,467",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Pariatur reprehenderit labore sunt incididunt ullamco labore cupidatat ex commodo aliqua ut ut magna. Mollit incididunt irure sunt et nostrud et ullamco eiusmod non aliquip officia excepteur amet incididunt. Aute nostrud non Lorem aliquip proident enim quis veniam non enim esse.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 4,
+          "price": "$188,083",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Eiusmod aliquip Lorem fugiat culpa ipsum nulla excepteur aliquip ea ex non cillum officia. Reprehenderit excepteur ut excepteur id ipsum culpa aute amet elit do. Excepteur incididunt ipsum voluptate est fugiat deserunt sit exercitation et eiusmod proident qui. Cupidatat aute labore quis voluptate. Officia do qui Lorem velit ipsum irure nulla dolore qui esse elit officia elit sunt.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 1,
+          "price": "$226,701",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Minim reprehenderit dolor elit et duis anim quis sit velit minim sint ut. Quis duis commodo voluptate do exercitation nulla sunt do velit magna occaecat elit nulla sit. Deserunt occaecat aliquip ut mollit do. Eiusmod qui sunt deserunt eiusmod. Culpa culpa incididunt ad nostrud mollit sit aliquip. Irure irure velit culpa amet commodo eu cupidatat minim consectetur id velit dolor adipisicing dolore. Eiusmod id anim Lorem incididunt non.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 3,
+          "price": "$73,060",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Deserunt aute sit fugiat ea esse nulla anim esse ad ullamco incididunt fugiat nisi reprehenderit. Exercitation Lorem occaecat fugiat deserunt proident ad aute. Ex cillum anim minim commodo elit eiusmod officia. Aute laborum eu id irure consequat.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 2,
+          "price": "$163,560",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Commodo non mollit eu ut proident esse ullamco. Officia duis culpa dolor duis nisi quis anim ipsum qui ad ad sint. Labore veniam velit do proident eiusmod esse proident est. Sit quis duis esse consequat esse commodo Lorem cillum dolor cillum officia excepteur. Id Lorem veniam voluptate aliqua voluptate et veniam cupidatat commodo aliquip. Amet proident magna aliqua elit cupidatat voluptate. Ad id cillum amet anim occaecat dolore sit ex ex amet anim nisi nulla.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 3,
+          "price": "$60,657",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Cupidatat excepteur cillum veniam anim amet amet. Voluptate sunt proident velit adipisicing Lorem ullamco aliqua minim velit cupidatat ullamco proident ex. Id tempor magna laborum deserunt anim. Deserunt ea ipsum eiusmod laborum Lorem voluptate ut officia sit voluptate qui. Consequat commodo excepteur laboris magna quis cupidatat officia. Ut aute consequat aliqua quis duis sint ex Lorem deserunt sunt id occaecat consectetur dolor. Commodo ex sit do amet mollit veniam consectetur elit labore deserunt deserunt Lorem.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 3,
+          "price": "$109,976",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Officia elit cillum irure et elit nisi culpa. Proident cillum nisi minim ad. Ex cupidatat voluptate fugiat minim aliquip mollit commodo ullamco. Non mollit exercitation consectetur sint id dolor exercitation nulla labore ipsum ipsum tempor proident.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 1,
+          "price": "$242,151",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Ullamco est laborum veniam eu elit proident amet. Adipisicing nisi cillum est aliqua nulla sint. Ea aliqua consectetur laborum eiusmod ullamco ad reprehenderit. Eiusmod veniam aute in nostrud adipisicing pariatur. Ad quis fugiat incididunt est pariatur eu.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 5,
+          "price": "$244,327",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Aliquip ipsum ipsum nisi commodo minim. Incididunt nisi aliqua exercitation nisi laboris ullamco incididunt quis. Commodo ad excepteur eiusmod voluptate ea mollit non in do aute cillum quis magna veniam. Dolore dolore aliqua do adipisicing magna magna aute. Proident deserunt excepteur excepteur et mollit dolor eu ullamco duis. Ea excepteur eu ad cupidatat reprehenderit veniam quis non dolor aute labore enim occaecat fugiat. Amet excepteur sunt cupidatat aliqua nulla non adipisicing.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 2,
+          "price": "$90,495",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Qui fugiat ad duis id ex enim ut id magna in mollit proident proident ut. Id et cupidatat veniam occaecat nulla aute fugiat non exercitation sunt do. Amet deserunt consequat cillum elit elit non aliqua ipsum est est eiusmod ex. Tempor dolor mollit enim fugiat minim tempor eu veniam ullamco officia. Excepteur deserunt sit cupidatat incididunt laboris reprehenderit excepteur irure veniam culpa aute commodo minim minim. Laboris nulla eu incididunt dolor do tempor laborum excepteur reprehenderit laborum sunt.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 4,
+          "price": "$117,152",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Deserunt adipisicing in dolore laborum aliqua tempor irure minim fugiat ex est. Nostrud dolore ea ea consectetur laboris dolor id minim mollit pariatur minim cillum irure proident. Nostrud quis laboris eiusmod nulla sint proident deserunt aute do. Enim esse cupidatat pariatur pariatur tempor fugiat exercitation incididunt voluptate dolor veniam tempor ullamco amet. Dolore voluptate exercitation ut tempor nulla. Fugiat cupidatat aute ad tempor.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$55,411",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Duis deserunt sunt exercitation deserunt ut. In minim dolore anim ipsum. Aliquip ut nostrud mollit minim cupidatat. Amet voluptate non ipsum velit velit ea laboris eiusmod est labore irure tempor labore. Sint excepteur id velit minim qui nostrud consectetur elit. Aute sunt est proident magna adipisicing non in excepteur irure magna ipsum magna est esse. Aute sit ad incididunt commodo deserunt quis officia commodo minim.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        }
+      ]
+    },
+    {
+      "hotel_id": "59d98634a7bb82334d6ef04c",
+      "hotel_name": "FUTURIS",
+      "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+      "hotel_location": {
+        "address": "661 Lester Court, Basye, Mississippi, 3461",
+        "lat": -2.815724,
+        "long": 178.992279
+      },
+      "check_in": "04:39",
+      "check_out": "07:19",
+      "hotel_website": "http://www.FUTURIS.com",
+      "rooms": [
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$185,059",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Do consectetur enim ullamco excepteur ut occaecat excepteur anim do sint tempor incididunt proident nostrud. Nulla elit qui quis commodo ut. Irure eu cupidatat dolor mollit officia anim commodo ullamco. Laboris culpa velit culpa ipsum minim exercitation ea minim pariatur adipisicing sint.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$118,241",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Consequat sunt mollit do adipisicing excepteur id exercitation magna sit cupidatat occaecat. Sint ipsum aliquip nisi anim. Eu veniam cupidatat commodo sit voluptate ipsum eu. Mollit dolor amet fugiat excepteur.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$60,749",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Amet ex commodo ullamco sit non sunt tempor elit laborum excepteur ipsum. Officia velit qui incididunt tempor exercitation. In exercitation amet est cupidatat velit in et sunt voluptate aliqua esse.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$66,877",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Sunt eiusmod sint aute ut exercitation sit est velit labore consequat eiusmod tempor proident. Ut ipsum deserunt ad sint Lorem. Consectetur dolore consectetur id enim velit consectetur fugiat voluptate.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$128,384",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Ad cillum sit id aliquip et consectetur veniam magna reprehenderit labore velit eiusmod laborum. Amet officia nisi elit est elit. Sit quis commodo laborum duis sunt commodo. Minim id do labore ullamco deserunt commodo velit pariatur non consequat. In laboris eu nisi excepteur dolore qui culpa eiusmod aliquip ad. Proident sunt consectetur in voluptate id laboris sint cillum et non. Sunt irure commodo aliquip veniam.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$130,751",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Ex aute magna tempor deserunt. Labore irure culpa tempor quis nostrud. Dolor proident cupidatat aute minim id duis in est esse deserunt culpa aute non incididunt. Non officia do sunt sit sit.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 4,
+          "price": "$168,336",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Exercitation officia excepteur eu ullamco non aliqua incididunt enim esse et veniam ea velit. Eiusmod adipisicing enim nulla cillum ea esse proident velit. Laboris est fugiat veniam labore veniam sint et ad ex minim incididunt anim. Et exercitation adipisicing voluptate qui aliquip commodo pariatur. Pariatur ipsum laborum ex adipisicing. Adipisicing incididunt exercitation proident qui dolore voluptate. Pariatur excepteur et Lorem deserunt nisi ad eu voluptate irure enim sit occaecat elit.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 2,
+          "price": "$119,950",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Ullamco anim tempor anim aute nulla velit consectetur sunt veniam. Labore aliquip pariatur adipisicing et occaecat nisi eu nisi ad exercitation ex duis veniam excepteur. Ut enim ut ea cupidatat. Ex esse in qui consectetur officia sit officia deserunt. Elit veniam adipisicing esse commodo et adipisicing nulla nisi.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 1,
+          "price": "$93,446",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Cupidatat tempor dolore aliquip aute enim enim sit irure consequat sit elit consequat officia ex. Ut laborum enim non id sit enim. Aute et aute minim aute velit laboris. Irure eu laborum proident et do labore tempor elit enim. Lorem ea consectetur sunt elit ea non labore ex. Veniam exercitation dolore deserunt culpa in pariatur cupidatat ex elit mollit.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 4,
+          "price": "$218,001",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Fugiat nisi et incididunt excepteur consectetur qui labore ipsum aliqua commodo voluptate. Cillum labore commodo duis incididunt qui sunt mollit laborum tempor excepteur elit reprehenderit eiusmod sunt. Exercitation ipsum labore enim proident. Consectetur cillum commodo cupidatat cupidatat sint sint occaecat adipisicing ullamco.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 3,
+          "price": "$189,194",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Aliquip aliquip culpa Lorem id commodo mollit exercitation ad nisi sunt labore veniam. Eu laboris amet pariatur laboris cillum voluptate. Mollit aute veniam veniam officia tempor tempor voluptate laborum elit elit. Consequat ullamco aute elit duis commodo aute aliqua tempor ex. Labore magna veniam ipsum in magna quis voluptate non exercitation ullamco.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 4,
+          "price": "$219,477",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Aute eu officia veniam ipsum duis enim aliquip do duis eiusmod nisi cillum exercitation. Proident irure anim sint eiusmod mollit eiusmod sunt aliquip laboris. Eiusmod amet enim velit aute laboris laboris. Ea pariatur labore exercitation sunt sunt reprehenderit eu do do.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 4,
+          "price": "$167,403",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+          "description": "Lorem exercitation anim reprehenderit ad laborum duis proident culpa nisi in ex. Id amet sint commodo laborum cupidatat ut incididunt nulla aute id magna. Labore quis est irure nisi sit officia in magna sint reprehenderit sint consectetur. Elit proident qui veniam magna. Consequat non laborum adipisicing id sit mollit. Enim incididunt mollit sit ea Lorem.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 4,
+          "price": "$185,398",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Aliquip pariatur consequat consectetur exercitation aliqua officia laboris proident esse amet eu deserunt velit eiusmod. In adipisicing ut nisi aliqua ex id. Veniam eiusmod reprehenderit eiusmod amet et minim. Pariatur non id aute pariatur est dolore do mollit. Sit labore in adipisicing dolore tempor consectetur esse dolore nulla culpa veniam culpa magna irure. Ex deserunt consequat ex tempor. Incididunt minim ad commodo sit deserunt aliquip aute.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 1
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 1,
+          "price": "$159,957",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Lorem minim reprehenderit culpa incididunt minim cupidatat occaecat irure in cupidatat eiusmod dolor quis. Eiusmod sit dolor in eu fugiat sunt ipsum est non consequat ex aliqua. Culpa nostrud labore ut aliquip. Esse minim magna nisi ad velit veniam. Reprehenderit cupidatat occaecat irure excepteur pariatur.\r\n",
+          "beds": {
+            "simple": 1,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 5,
+          "price": "$160,118",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Eu ad elit elit laboris adipisicing occaecat enim labore cupidatat do nulla. Nisi culpa sunt cillum voluptate ea non dolore veniam exercitation dolore pariatur est. Pariatur nisi incididunt dolor est aute. Anim adipisicing ea nisi ad consequat. Amet ea id velit est velit fugiat sint occaecat. Consectetur eiusmod est voluptate veniam consequat laborum velit ex occaecat eu labore dolore do esse.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "sencilla",
+          "capacity": 2,
+          "price": "$182,303",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
+          "description": "Dolor sint tempor dolore adipisicing. Ipsum in nulla culpa commodo ad nisi dolore amet in non aliqua. Sunt fugiat minim ad fugiat occaecat duis nostrud laborum esse cillum laboris enim adipisicing. Magna minim qui culpa est ad officia tempor anim consequat. Cupidatat quis magna excepteur ullamco Lorem ad velit sunt id adipisicing ipsum.\r\n",
+          "beds": {
+            "simple": 3,
+            "double": 2
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 5,
+          "price": "$73,812",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Eiusmod consequat deserunt incididunt dolore nostrud. Anim occaecat deserunt eiusmod proident amet officia ipsum anim occaecat nisi ea. Est Lorem ea sit ut ipsum velit nisi deserunt reprehenderit elit. Nulla in nostrud aute cillum ipsum amet cupidatat et nisi voluptate. Excepteur minim proident cillum laborum eu sunt. Et labore quis eiusmod commodo id sunt laboris nisi ea nisi velit minim elit. Adipisicing nostrud officia ad elit non nisi amet elit nostrud.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 3
+          }
+        },
+        {
+          "room_type": "lujosa",
+          "capacity": 2,
+          "price": "$137,462",
+          "currency": "COP",
+          "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel5.jpg",
+          "description": "Fugiat quis magna exercitation magna ad labore anim Lorem ad commodo laboris. Non exercitation duis ex reprehenderit ullamco officia sunt occaecat pariatur officia amet. Cupidatat adipisicing consectetur ullamco consectetur ullamco nulla sit mollit ea do aliqua irure. Proident ad dolor sint id dolor. Proident irure reprehenderit duis magna anim elit in sunt incididunt aliqua ullamco nulla. Aliqua consequat velit veniam esse qui. Do et occaecat amet sunt ea fugiat amet nostrud adipisicing adipisicing exercitation id aliqua non.\r\n",
+          "beds": {
+            "simple": 2,
+            "double": 2
+          }
+        }
+      ]
+    }
+  ]
