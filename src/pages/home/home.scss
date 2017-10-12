@@ -1,3 +1,11 @@
-page-home {
+ion-content {
+    background-image: url('../../assets/img/wallpaper.jpg');
+    background-size: cover;
+}
 
+page-home {
+    ion-item {
+        background-color: #f6f6f6;
+        opacity: 0.7;
+    }
 }

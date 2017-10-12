@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Hotelz
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Fecha de inicio</ion-label>
+      <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
+    </ion-item>
+  
+    <ion-item margin-top>
+      <ion-label floating>Fecha de fin</ion-label>
+      <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
