@@ -11,18 +11,15 @@
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
-    <ion-card>
-      <img src=""/>
+    <ion-card *ngFor="let room of onlyRooms">
+      <img [src]="room.room_thumbnail"/>
       <ion-card-content>
         <ion-card-title>
-          Nine Inch Nails Live
+          {{room.room_type}}
         </ion-card-title>
         <p>
-          The most popular industrial group ever, and largely
-          responsible for bringing the music to a mass audience.
+          {{room.description}}
         </p>
       </ion-card-content>
     </ion-card>

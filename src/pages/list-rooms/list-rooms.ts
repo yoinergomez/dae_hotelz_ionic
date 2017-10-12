@@ -1,30 +1,30 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Hotel, Rooms } from "../../interfaces/response.inteface";
-
+import { HotelzProvider } from "../../providers/hotelz/hotelz";
 
 @IonicPage()
 @Component({
   selector: 'page-list-rooms',
   templateUrl: 'list-rooms.html',
+  providers: [HotelzProvider],
 })
 export class ListRoomsPage {
 
-  response:Hotel[] = []
+  response:any
   onlyRooms = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.listOnlyRooms()
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public _hotelzService: HotelzProvider) {
+      this.callAllHotel()
+
   }
 
-  listOnlyRooms(){
-    console.log("Hello World")
-    for (let hotel in this.response) {
-      let hotel2:any = hotel
-      let rooms:any[] = hotel2.rooms
-      for (let room in rooms) {
-          console.log(room)
-      }
-    }
+  callAllHotel(){
+    this._hotelzService.getAvalaibleRooms("response-dezameron").then((response) => {
+      this.response=response
+      console.log(this.response)
+      this.onlyRooms = this.response.rooms
+    })
   }
+
 }

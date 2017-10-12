@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ListRoomsPage } from "../pages/list-rooms/list-rooms";
 import { HotelzProvider } from '../providers/hotelz/hotelz';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +31,8 @@ import { HotelzProvider } from '../providers/hotelz/hotelz';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HotelzProvider
+    HotelzProvider,
+    HttpModule
   ]
 })
 export class AppModule {}
