@@ -6,7 +6,6 @@ import { HotelzProvider } from "../../providers/hotelz/hotelz";
 @Component({
   selector: 'page-list-rooms',
   templateUrl: 'list-rooms.html',
-  providers: [HotelzProvider],
 })
 export class ListRoomsPage {
 
@@ -20,9 +19,9 @@ export class ListRoomsPage {
   }
 
   callAllHotel(){
-    this._hotelzService.getAvalaibleRooms("response-dezameron").then((response) => {
+    this._hotelzService.getAvalaibleRooms().then((response) => {
       this.response=response
-      console.log(this.response)
+      console.log(response)
       this.onlyRooms = this.response.rooms
     })
   }

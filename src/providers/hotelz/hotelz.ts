@@ -14,12 +14,12 @@ export class HotelzProvider {
   constructor(public http: Http) {
   }
 
-  getAvalaibleRooms( hotelName:string ){
+  getAvalaibleRooms(){
     return new Promise((resolve, reject)=>{
-      let link = "assets/" + hotelName + ".json"
-      this.http.get(link).subscribe(
+      this.http.get("assets/response-dezameron.json").subscribe(
         (data) =>{
-          resolve(JSON.parse(data._body));
+          resolve(data.json())
+          //return(JSON.parse(data))
           //resolve(null);
         }, (error)=>{
           reject(null);
