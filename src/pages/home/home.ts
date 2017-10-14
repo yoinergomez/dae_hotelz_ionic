@@ -4,7 +4,6 @@ import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { RequestSearchRooms } from "../../interfaces/request.interface";
 
 @Component({
-  selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {

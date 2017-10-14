@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+
 import { HotelzProvider } from './hotelz';
 
 describe('Hotelz Provider', () => {
@@ -20,6 +20,12 @@ describe('Hotelz Provider', () => {
 
     it('sould be string var defined ', () => {
       let varUndefined = 'test';
+      let result = provider.validateValue(varUndefined);
+      expect(result).toEqual(false);
+    });
+
+    it('string var with negative number ', () => {
+      let varUndefined = '-24.290344';
       let result = provider.validateValue(varUndefined);
       expect(result).toEqual(false);
     });

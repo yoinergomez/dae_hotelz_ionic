@@ -17,13 +17,12 @@ export class HotelzProvider {
     return new Promise((resolve, reject)=>{
       this.http.get("assets/response-dezameron.json").subscribe(
         (data) =>{
-          resolve(data.json())
-          /*let response:any = data;
-          if(this.validateJson(JSON.parse(response._body))){
-            resolve(JSON.parse(response._body));
+          let response:any = data.json();
+          if(this.validateJson(response)){
+            resolve(response);
           }else{
             resolve(null);
-          }*/
+          }
         }, (error)=>{
           reject(null);
         }
@@ -40,7 +39,7 @@ export class HotelzProvider {
     if(size == 0 || this.validateValue(varRooms.check_in) ||this.validateValue(varRooms.check_out)||
       this.validateValue(varRooms.hotel_id)||this.validateValue(varRooms.hotel_name)||
       this.validateValue(varRooms.hotel_website)||
-      /*this.validateInteger(varRooms.hotel_location.lat)||this.validateInteger(varRooms.hotel_location.long)||*/
+      this.validateValue(varRooms.hotel_location.lat)||this.validateValue(varRooms.hotel_location.long)||
       this.validateValue(varRooms.hotel_location.address)||
       this.validateValue(varRooms.hotel_thumbnail)){
       return false;
