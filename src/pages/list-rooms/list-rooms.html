@@ -12,15 +12,28 @@
 
 </ion-header>
 <ion-content padding>
+
     <ion-card *ngFor="let room of onlyRooms">
-      <img [src]="room.room_thumbnail"/>
-      <ion-card-content>
-        <ion-card-title>
-          {{room.room_type}}
-        </ion-card-title>
-        <p>
-          {{room.description}}
-        </p>
-      </ion-card-content>
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="response.hotel_thumbnail">
+        </ion-avatar>
+        <h2>{{response.hotel_name}}</h2>
+        <p>{{room.room_type}}</p>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-left clear small>
+              <ion-icon name="md-cash"></ion-icon>
+              <div>{{room.price}} {{room.currency}}</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <img [src]="room.room_thumbnail">
+
+      <button ion-button icon-left clear small>
+        <ion-icon name="ios-glasses"></ion-icon>
+        <div text-wrap>{{response.hotel_location.address}}</div>
+      </button>
     </ion-card>
 </ion-content>

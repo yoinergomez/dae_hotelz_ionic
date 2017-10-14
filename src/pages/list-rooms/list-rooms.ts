@@ -13,7 +13,7 @@ export class ListRoomsPage {
   onlyRooms = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public _hotelzService: HotelzProvider) {
+              private _hotelzService: HotelzProvider) {
       this.callAllHotel()
 
   }
