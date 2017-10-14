@@ -13,7 +13,7 @@
       <ion-label floating>Fecha de inicio</ion-label>
       <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
     </ion-item>
-  
+
     <ion-item margin-top>
       <ion-label floating>Fecha de fin</ion-label>
       <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
@@ -36,5 +36,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  <button ion-button block color="secondary" [navPush]=listRooms >Buscar</button>
 
 </ion-content>
