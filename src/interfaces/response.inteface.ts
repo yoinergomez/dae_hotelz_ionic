@@ -11,8 +11,8 @@ export interface Hotel{
 
 interface Location{
   address: string,
-  lat: number,
-  long: number
+  lat: string,
+  long: string
 }
 
 export interface Rooms{
