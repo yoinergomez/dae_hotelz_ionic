@@ -61,6 +61,9 @@ export class HotelzProvider {
    * @param jsonString
    */
   validateValue(jsonString){
+    if(typeof jsonString === 'undefined'){
+      return true;
+    }
     return (jsonString.length === 0 || !jsonString.trim());
   }
 
