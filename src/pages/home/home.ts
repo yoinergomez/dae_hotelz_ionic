@@ -14,7 +14,4 @@ export class HomePage {
       console.log(this.rooms);
     });
   }
-
-
-
 }
