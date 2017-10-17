@@ -7,5 +7,10 @@ page-home {
     ion-item {
         background-color: #f6f6f6;
         opacity: 0.8;
+        border-radius: 3px !important;
     }
+}
+
+.action-sheet-cancel {
+    color: red !important;
 }
