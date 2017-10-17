@@ -9,31 +9,36 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="search"></ion-icon> Ciudad</ion-label>
-      <ion-select [(ngModel)]="request.city" interface="action-sheet" cancelText="Cancelar">
-        <ion-option value="05001">Medellín</ion-option>
-        <ion-option value="11001">Bogotá</ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-label text-center color="dark" class="title">
+        <strong>hotelz</strong><small>.com</small>
+      </ion-label>
   </ion-list>
 
   <!-- <ion-grid no-padding> -->
   <ion-grid>
     <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="search"></ion-icon> Ciudad</ion-label>
+          <ion-select [(ngModel)]="request.city" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="05001">Medellín</ion-option>
+            <ion-option value="11001">Bogotá</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
       <ion-col col-6>
         <ion-item>
           <ion-label stacked>
             <ion-icon name="calendar"></ion-icon> Ingreso</ion-label>
-          <ion-datetime placeholder="CHECK IN" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
+          <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
         </ion-item>
       </ion-col>
       <ion-col col-6>
         <ion-item>
           <ion-label stacked>
             <ion-icon name="calendar"></ion-icon> Salida</ion-label>
-          <ion-datetime placeholder="CHECK OUT" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
+          <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
         </ion-item>
       </ion-col>
       <ion-col>
@@ -62,7 +67,7 @@
         </ion-item>
       </ion-col>
       <ion-col col-12>
-        <button ion-button block color="secondary" [navPush]=listRooms>Buscar</button>
+        <button ion-button block color="light" [navPush]=listRooms>Buscar</button>
       </ion-col>
     </ion-row>
   </ion-grid>
