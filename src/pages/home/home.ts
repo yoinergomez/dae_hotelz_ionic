@@ -11,13 +11,16 @@ import { ListRoomsPage } from "../list-rooms/list-rooms";
 export class HomePage {
   request: RequestSearchRooms;
   rooms: any = [];
-  listRooms: any;
+
   constructor(public navCtrl: NavController, private _hotelzProvider: HotelzProvider) {
-    _hotelzProvider.getAvalaibleRooms().then((response)=>{
-      this.rooms = response;
-      console.log(this.rooms);
-    });
     this.request = {} as RequestSearchRooms;
-    this.listRooms = ListRoomsPage;
   }
+
+  getRooms(event) {
+    this._hotelzProvider.getAvalaibleRooms().then((response) => {
+      let result: any = response
+      this.navCtrl.push(ListRoomsPage, {response: result})
+    })
+  }
+
 }
