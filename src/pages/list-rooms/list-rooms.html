@@ -14,26 +14,30 @@
 <ion-content padding>
 
     <ion-card *ngFor="let room of onlyRooms">
+
       <ion-item>
-        <ion-avatar item-start>
-          <img [src]="response.hotel_thumbnail">
-        </ion-avatar>
+        <ion-thumbnail item-start>
+          <img [src]="room.room_thumbnail">
+        </ion-thumbnail>
         <h2>{{response.hotel_name}}</h2>
-        <p>{{room.room_type}}</p>
-        <ion-row>
+        <ion-icon text-wrap name="pin"> {{response.hotel_location.address}}</ion-icon>
+        <ion-row text-right>
           <ion-col>
-            <button ion-button icon-left clear small>
-              <ion-icon name="md-cash"></ion-icon>
-              <div>{{room.price}} {{room.currency}}</div>
-            </button>
+            <ion-badge item-end>
+              <ion-icon name="md-beer"></ion-icon> {{room.room_type}}
+            </ion-badge>
           </ion-col>
         </ion-row>
       </ion-item>
-      <img [src]="room.room_thumbnail">
 
-      <button ion-button icon-left clear small>
-        <ion-icon name="ios-glasses"></ion-icon>
-        <div text-wrap>{{response.hotel_location.address}}</div>
-      </button>
+      <ion-item>
+        <span item-left><strong>{{room.price | currency:'USD':true}}</strong></span>
+        <span item-left>({{room.currency}})</span>
+        <button ion-button icon-left clear item-end>
+          <ion-icon name="navigate"></ion-icon>
+          Reservar
+        </button>
+      </ion-item>
+
     </ion-card>
 </ion-content>
