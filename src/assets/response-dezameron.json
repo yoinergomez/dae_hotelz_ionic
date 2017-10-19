@@ -5,8 +5,8 @@
     "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel1.jpg",
     "hotel_location": {
       "address": "456 Granite Street, Olney, Indiana, 8288",
-      "lat": -48.766897,
-      "long": -24.290344
+      "lat": "-48.766897",
+      "long": "-24.290344"
     },
     "check_in": "12:05",
     "check_out": "05:23",
@@ -14,8 +14,8 @@
     "rooms": [
       {
         "room_type": "lujosa",
-        "capacity": 2,
-        "price": "$196,302",
+        "capacity": 1,
+        "price": 196302,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Elit cillum ea consectetur nisi irure nisi sint sunt velit eu pariatur reprehenderit sint. Anim velit do exercitation incididunt dolor proident aute esse cupidatat excepteur proident. Magna sint do officia eu cupidatat dolore excepteur. Proident adipisicing commodo amet enim consectetur qui sunt officia aliquip fugiat ullamco in nulla nisi.\r\n",
@@ -26,8 +26,8 @@
       },
       {
         "room_type": "sencilla",
-        "capacity": 1,
-        "price": "$161,808",
+        "capacity": 2,
+        "price": 161808,
         "currency": "COP",
         "room_thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Japanese_youth_hostel_room.jpg",
         "description": "Non exercitation dolor magna in. Culpa cupidatat enim exercitation laborum minim labore consequat amet sint dolor reprehenderit deserunt. Sint elit quis exercitation qui veniam excepteur nostrud reprehenderit. Pariatur ad ullamco aliqua amet deserunt cillum non enim nostrud. Nisi nulla qui consectetur veniam. Aliquip ullamco sint excepteur eu officia ut elit cupidatat Lorem minim.\r\n",
@@ -39,7 +39,7 @@
       {
         "room_type": "lujosa",
         "capacity": 5,
-        "price": "$70,848",
+        "price": 70848,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Dolore tempor sint ea in ea enim eu sint dolore velit duis. Tempor nostrud et anim officia. Enim cupidatat esse qui occaecat excepteur minim nostrud consectetur pariatur fugiat aliquip non. Eu et labore reprehenderit nulla incididunt.\r\n",
@@ -51,7 +51,7 @@
       {
         "room_type": "lujosa",
         "capacity": 3,
-        "price": "$239,645",
+        "price": 239645,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Ex pariatur anim ipsum aute quis anim aliquip deserunt voluptate esse sunt. Veniam id esse do ipsum minim fugiat cillum. Veniam aute et sint aliquip dolore exercitation labore consectetur fugiat id. Incididunt aliquip velit aliquip culpa commodo ea id commodo.\r\n",
@@ -63,7 +63,7 @@
       {
         "room_type": "lujosa",
         "capacity": 2,
-        "price": "$142,378",
+        "price": 142378,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Duis nulla laboris proident proident. Fugiat est et excepteur et exercitation in exercitation aute nulla voluptate et. Id adipisicing mollit ullamco id sit ipsum velit laborum ad nostrud amet laborum. Ex deserunt consequat voluptate consequat laborum aliquip eiusmod labore esse dolor anim anim commodo.\r\n",
@@ -75,7 +75,7 @@
       {
         "room_type": "sencilla",
         "capacity": 5,
-        "price": "$50,362",
+        "price": 50362,
         "currency": "COP",
         "room_thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Japanese_youth_hostel_room.jpg",
         "description": "Cupidatat nostrud elit commodo proident et ullamco. Dolore proident sit proident dolore exercitation est ut reprehenderit reprehenderit minim. Id nulla ad labore quis in fugiat est voluptate consectetur dolore nisi tempor. Est Lorem reprehenderit sit proident amet nostrud exercitation eiusmod Lorem elit. Qui elit anim commodo dolor aute consectetur. Velit est irure ullamco fugiat Lorem labore nulla laborum cupidatat do tempor excepteur consequat.\r\n",
@@ -87,7 +87,7 @@
       {
         "room_type": "sencilla",
         "capacity": 5,
-        "price": "$244,154",
+        "price": 244154,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Quis voluptate consequat qui consequat do quis magna duis Lorem adipisicing. Exercitation dolore aliqua laborum id sit. Id adipisicing ad nisi elit fugiat ea elit anim deserunt anim. Veniam est reprehenderit ipsum sit nulla id cillum dolore sint. Occaecat magna dolor in eiusmod fugiat aliquip laboris et exercitation veniam anim reprehenderit ut. Non est aliqua ea amet occaecat eiusmod cupidatat commodo veniam.\r\n",
@@ -99,7 +99,7 @@
       {
         "room_type": "lujosa",
         "capacity": 5,
-        "price": "$116,882",
+        "price": 116882,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel4.jpg",
         "description": "Aliqua quis ea adipisicing exercitation culpa labore. Enim ea aute exercitation dolor velit consequat eu aute enim quis adipisicing esse. Eiusmod sit qui pariatur est amet esse irure aliquip ad laborum. Esse consectetur sint pariatur non esse magna qui excepteur voluptate consequat est et. Non consequat deserunt ex ut ullamco irure voluptate. Sint sint dolor est Lorem Lorem consequat tempor in velit officia laborum ad in pariatur.\r\n",
@@ -111,7 +111,7 @@
       {
         "room_type": "sencilla",
         "capacity": 2,
-        "price": "$135,306",
+        "price": 135306,
         "currency": "COP",
         "room_thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Japanese_youth_hostel_room.jpg",
         "description": "Occaecat aliqua veniam Lorem nulla sit ad laboris. Aliquip labore eu dolore veniam laboris. Adipisicing id elit velit do consectetur commodo non velit ipsum deserunt pariatur dolor consectetur. Do deserunt culpa proident ad do quis Lorem. Officia officia Lorem magna adipisicing velit proident nostrud pariatur. Ut consequat mollit duis Lorem nulla laborum velit proident nulla.\r\n",
@@ -123,7 +123,7 @@
       {
         "room_type": "lujosa",
         "capacity": 1,
-        "price": "$238,037",
+        "price": 238037,
         "currency": "COP",
         "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
         "description": "Eiusmod in ad nostrud et. Et enim id tempor tempor cillum. Aute dolore incididunt ea Lorem quis excepteur cupidatat consectetur do in. Aliquip sint eiusmod non elit anim aliquip sunt elit sit proident adipisicing aliquip incididunt. Dolor aute duis mollit aliquip aute fugiat qui pariatur dolore.\r\n",

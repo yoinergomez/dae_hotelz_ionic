@@ -9,21 +9,13 @@ import { HotelzProvider } from "../../providers/hotelz/hotelz";
 })
 export class ListRoomsPage {
 
-  response:any
+  response: any
   onlyRooms = []
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              private _hotelzService: HotelzProvider) {
-      this.callAllHotel()
-
-  }
-
-  callAllHotel(){
-    this._hotelzService.getAvalaibleRooms().then((response) => {
-      this.response=response
-      console.log(response)
-      this.onlyRooms = this.response.rooms
-    })
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.response = navParams.get('response');
+    this.onlyRooms = this.response.rooms
+    console.log(this.onlyRooms)
   }
 
 }

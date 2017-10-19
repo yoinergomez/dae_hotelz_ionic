@@ -1,14 +1,74 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Hotelz
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+      <ion-label text-center color="dark" class="title">
+        <strong>hotelz</strong><small>.com</small>
+      </ion-label>
+  </ion-list>
+
+  <!-- <ion-grid no-padding> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="search"></ion-icon> Ciudad</ion-label>
+          <ion-select [(ngModel)]="request.city" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="05001">Medellín</ion-option>
+            <ion-option value="11001">Bogotá</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>
+            <ion-icon name="calendar"></ion-icon> Ingreso</ion-label>
+          <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>
+            <ion-icon name="calendar"></ion-icon> Salida</ion-label>
+          <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="people"></ion-icon> Huéspedes</ion-label>
+          <!-- <ion-icon name="people"></ion-icon> Número de huéspedes</ion-label> -->
+          <ion-select [(ngModel)]="request.hosts" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="grid"></ion-icon> Habitación</ion-label>
+          <!-- <ion-icon name="grid"></ion-icon> Tipo de habitación</ion-label> -->
+          <ion-select [(ngModel)]="request.room_type" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="S">Sencilla</ion-option>
+            <ion-option value="L">Lujosa</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 margin-top>
+        <button ion-button block color="light" (click)="getRooms($event)">Buscar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
