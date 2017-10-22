@@ -8,6 +8,11 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class HotelzProvider {
 
+  /*Endpoints
+    https://udeain.herokuapp.com/api/v1
+      - /rooms/arrive_date/01-01-2017/leave_date/02-02-2017/city/05001/hosts/3/room_type/l
+  */
+
   constructor(public http: Http) {}
 
   /**
@@ -15,7 +20,8 @@ export class HotelzProvider {
    */
   getAvalaibleRooms(hotel_name: string){
     return new Promise((resolve, reject)=>{
-        let url = "assets/" + hotel_name
+        let url = "https://udeain.herokuapp.com/api/v1/rooms/arrive_date/01-01-2017/leave_date/02-02-2017/city/05001/hosts/3/room_type/l"
+        //let url = "assets/" + hotel_name
         this.http.get(url).subscribe(
           (data) =>{
             resolve(data.json());
