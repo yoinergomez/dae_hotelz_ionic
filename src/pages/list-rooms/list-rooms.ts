@@ -31,7 +31,6 @@ export class ListRoomsPage {
 
   createListRooms(hotel_response:any){
       let hotel = hotel_response
-      console.log("Hola mundo")
       for(let room of hotel.rooms){
         let newRoom = {
           hotel_name: hotel.hotel_name,
