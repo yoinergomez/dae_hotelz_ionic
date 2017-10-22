@@ -12,15 +12,23 @@ export class HomePage {
   request: RequestSearchRooms;
   rooms: any = [];
 
+  hotels_names = ["response-dezameron.json", "response-udeainn.json", "response-colombiaresort.json"]
+
+
   constructor(public navCtrl: NavController, private _hotelzProvider: HotelzProvider) {
     this.request = {} as RequestSearchRooms;
   }
 
   getRooms(event) {
-    this._hotelzProvider.getAvalaibleRooms().then((response) => {
-      let result: any = response
+    let result: any[] = []
+    new Promise((resolve, reject)=>{
+      for (let hotel_name of this.hotels_names) {
+        this._hotelzProvider.getAvalaibleRooms(hotel_name).then((response) => {
+          result.push(response)
+        })
+      }
       this.navCtrl.push(ListRoomsPage, {response: result})
-    })
+    });
   }
 
 }

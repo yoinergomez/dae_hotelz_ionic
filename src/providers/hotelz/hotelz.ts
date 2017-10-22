@@ -13,21 +13,22 @@ export class HotelzProvider {
   /**
    * Get the availables rooms from a petition http
    */
-  getAvalaibleRooms(){
+  getAvalaibleRooms(hotel_name: string){
     return new Promise((resolve, reject)=>{
-      this.http.get("assets/response-dezameron.json").subscribe(
-        (data) =>{
-          resolve(data.json())
-          /*let response:any = data;
-          if(this.validateJson(JSON.parse(response._body))){
-            resolve(JSON.parse(response._body));
-          }else{
-            resolve(null);
-          }*/
-        }, (error)=>{
-          reject(null);
-        }
-      );
+        let url = "assets/" + hotel_name
+        this.http.get(url).subscribe(
+          (data) =>{
+            resolve(data.json());
+            /*let response:any = data;
+            if(this.validateJson(JSON.parse(response._body))){
+              resolve(JSON.parse(response._body));
+            }else{
+              resolve(null);
+            }*/
+          }, (error)=>{
+            reject(null);
+          }
+        );
     });
   }
 
