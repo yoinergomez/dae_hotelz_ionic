@@ -15,9 +15,8 @@ export class HomePage {
     this.request = {} as RequestSearchRooms;
   }
 
-  getRooms(evento) {
-    console.log(evento)
-    this.navCtrl.push(ListRoomsPage, {"info": evento});
+  getRooms() {
+    this.navCtrl.push(ListRoomsPage, {"info": this.request});
   }
 
 
