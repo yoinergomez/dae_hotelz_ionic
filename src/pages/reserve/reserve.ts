@@ -15,11 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ReservePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  room: any;
+  person: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ReservePage');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.room = this.navParams.get('room');
+    console.log(this.room);
   }
 
 }

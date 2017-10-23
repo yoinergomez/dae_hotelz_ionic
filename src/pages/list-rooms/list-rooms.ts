@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
+import { ReservePage } from '../reserve/reserve';
 
 @IonicPage()
 @Component({
@@ -57,5 +58,9 @@ export class ListRoomsPage {
       }
       return 0;
     });
+  }
+
+  reserve(room) {
+    this.navCtrl.push(ReservePage, {"room": room});
   }
 }
