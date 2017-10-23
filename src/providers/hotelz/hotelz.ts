@@ -18,10 +18,10 @@ export class HotelzProvider {
   /**
    * Get the availables rooms from a petition http
    */
-  getAvalaibleRooms(hotel_name: string){
+  getAvalaibleRooms(hotel_name: string, info: any){
     return new Promise((resolve, reject)=>{
-        let url = "https://udeain.herokuapp.com/api/v1/rooms/arrive_date/01-01-2017/leave_date/02-02-2017/city/05001/hosts/3/room_type/l"
-        //let url = "assets/" + hotel_name
+        let url = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"
+        //let url = hotel_name + "/api/v1/rooms?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
         this.http.get(url).subscribe(
           (data) =>{
             resolve(data.json());

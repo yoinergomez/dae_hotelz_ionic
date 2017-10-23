@@ -9,19 +9,21 @@ import { HotelzProvider } from '../../providers/hotelz/hotelz';
 })
 export class ListRoomsPage {
 
+  info: any;
   hotels_response: any = []
   onlyRooms = []
-  hotels_names = ["response-dezameron.json", "response-udeainn.json", "response-colombiaresort.json"]
+  hotels_names = ["https://udeain.herokuapp.com", "response-udeainn.json", "response-colombiaresort.json"]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
+    this.info = this.navParams.get("info")
     this.getRooms()
   }
 
   getRooms() {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
-        this._hotelzProvider.getAvalaibleRooms(hotel_name).then((response) => {
+        this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
           this.hotels_response.push(response)
           this.createListRooms(response)
         })
@@ -32,15 +34,14 @@ export class ListRoomsPage {
   createListRooms(hotel_response:any){
       let hotel = hotel_response
       for(let room of hotel.rooms){
-        let newRoom = {
-          hotel_name: hotel.hotel_name,
-          hotel_location: hotel.hotel_location.address,
-          room_type: room.room_type,
-          price: room.price,
-          room_thumbnail: room.room_thumbnail,
-          currency: room.currency
+        room.hotel_name = hotel.hotel_name
+        room.hotel_location= hotel.hotel_location.address
+        if(room.room_type=='l'){
+          room.room_type = "Lujosa"
+        }else{
+          room.room_type = "Secilla"
         }
-        this.onlyRooms.push(newRoom)
+        this.onlyRooms.push(room)
       }
       this.ordenar()
   }

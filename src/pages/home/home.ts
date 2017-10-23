@@ -16,7 +16,8 @@ export class HomePage {
   }
 
   getRooms(evento) {
-    this.navCtrl.push(ListRoomsPage);
+    console.log(evento)
+    this.navCtrl.push(ListRoomsPage, {"info": evento});
   }
 
 
