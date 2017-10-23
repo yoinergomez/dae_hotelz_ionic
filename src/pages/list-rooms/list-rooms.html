@@ -13,6 +13,12 @@
 </ion-header>
 <ion-content padding>
 
+    <ion-list>
+        <ion-label text-center color="dark" class="title">
+          <strong>hotelz</strong><small>.com</small>
+        </ion-label>
+    </ion-list>
+
     <ion-row>
       <ion-col col-6>
         <ion-item>
@@ -39,22 +45,19 @@
         <h2>{{room.hotel_name}}</h2>
         <ion-icon text-wrap name="pin"> {{room.hotel_location}}</ion-icon>
         <ion-row>
-          <ion-col>
-            <p>Camas: </p>
-            <p>  Dobles: {{room.beds.double}}</p>
-            <p>  Sencillas: {{room.beds.simple}}</p>
+          <ion-col class="small">
+            <p>Camas Dobles:</p> <p text-right>  {{room.beds.double}}</p>
+            <p>Camas Sencillas:</p> <p text-right> {{room.beds.simple}}</p>
           </ion-col>
-          <ion-col text-right>
-            <ion-badge item-end>
-              <ion-icon name="md-beer"></ion-icon> {{room.room_type}}
-            </ion-badge>
-          </ion-col>
+
         </ion-row>
       </ion-item>
 
       <ion-item>
-        <span item-left><strong>{{room.price | currency:'USD':true}}</strong></span>
-        <span item-left>({{room.currency}})</span>
+        <span class="small" item-left><strong>{{room.price | currency:'USD':true}}</strong></span>
+        <ion-badge class="small" item-end>
+          {{room.room_type}}
+        </ion-badge>
         <button ion-button icon-left clear item-end (click)="reserve(room)">
           <ion-icon name="navigate"></ion-icon>
           Reservar

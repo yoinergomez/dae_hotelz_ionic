@@ -22,28 +22,29 @@
   </ion-list>
 
   <ion-row>
-    <ion-col>
       <ion-card>
         <ion-item>
+
           <ion-thumbnail item-start>
             <img [src]="room.room_thumbnail">
           </ion-thumbnail>
           <h2>{{room.hotel_name}}</h2>
           <ion-icon text-wrap name="pin"> {{room.hotel_location}}</ion-icon>
-          <ion-row text-right>
-            <ion-col>
+
+          <ion-row>
+            <ion-col class="small">
+              <p>Camas Dobles:</p> <p text-right>  {{room.beds.double}}</p>
+              <p>Camas Sencillas:</p> <p text-right> {{room.beds.simple}}</p>
+            </ion-col>
+            <ion-col text-right>
               <ion-badge item-end>
-                <ion-icon name="md-beer"></ion-icon> {{room.room_type}}
+                {{room.room_type}}
               </ion-badge>
             </ion-col>
           </ion-row>
-        </ion-item>
-        <ion-item>
-          <span item-left><strong>{{room.price | currency:'USD':true}}</strong></span>
-          <span item-left>({{room.currency}})</span>
+
         </ion-item>
       </ion-card>
-    </ion-col>
   </ion-row>
 
   <ion-row>
