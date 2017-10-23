@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListRoomsPage } from "../pages/list-rooms/list-rooms";
 import { HotelzProvider } from '../providers/hotelz/hotelz';
+import { ReservePage } from '../pages/reserve/reserve'
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListRoomsPage
+    ListRoomsPage,
+    ReservePage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { HotelzProvider } from '../providers/hotelz/hotelz';
   entryComponents: [
     MyApp,
     HomePage,
-    ListRoomsPage
+    ListRoomsPage,
+    ReservePage
   ],
   providers: [
     StatusBar,
