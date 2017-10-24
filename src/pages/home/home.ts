@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { RequestSearchRooms } from "../../interfaces/request.interface";
-import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { ListRoomsPage } from "../list-rooms/list-rooms";
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
@@ -13,7 +11,7 @@ export class HomePage {
   rooms: any = [];
   formSearchRooms: FormGroup;
 
-  constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private _hotelzProvider: HotelzProvider) {
+  constructor(public navCtrl: NavController, private formBuilder: FormBuilder) {
     this.formSearchRooms = this.formBuilder.group({
       arrive_date: [null, Validators.required],
       leave_date: [null, Validators.required],
