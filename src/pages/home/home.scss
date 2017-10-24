@@ -11,12 +11,19 @@
 }
 
 .toolbar-title img{
-    filter: brightness(0) invert(1);
+    /*filter: brightness(0) invert(1); poner imagen con color blanco*/
     border: 2px solid white;
     padding: 5px;
+    background-color:white;/*background-color:transparent*/
 }
 
-
+.line{
+    height:50%;
+    border-bottom:1px solid white;
+    width:100%;
+    display:inline-block;
+    position:absolute;top:0
+}
 ion-content {
     background-image: url('../../assets/img/wallpaper.jpg');
     background-size: cover;
