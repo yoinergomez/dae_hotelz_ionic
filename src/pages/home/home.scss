@@ -1,3 +1,22 @@
+.toolbar-background {
+    background-color: transparent;
+}
+
+.toolbar{
+    padding: 10px 0;
+}
+
+.toolbar-title {
+    text-align: center; 
+}
+
+.toolbar-title img{
+    filter: brightness(0) invert(1);
+    border: 2px solid white;
+    padding: 5px;
+}
+
+
 ion-content {
     background-image: url('../../assets/img/wallpaper.jpg');
     background-size: cover;
