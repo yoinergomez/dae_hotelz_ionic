@@ -56,17 +56,13 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ion-col col-4>
-        <ion-item>
-          <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
-          <ion-select>
-            <ion-option value="cc">cc</ion-option>
-            <ion-option value="ti">ti</ion-option>
-          </ion-select>
-        </ion-item>
-    </ion-col>
-    <ion-col col-8>
+    <ion-col col-12>
       <ion-item>
+          <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+          <ion-select interface="action-sheet" cancelText="Cancelar">
+              <ion-option value="cc" selected="true">C.C</ion-option>
+              <ion-option value="ti">T.I</ion-option>
+          </ion-select>
         <ion-input placeholder="Documento" type="text"></ion-input>
       </ion-item>
     </ion-col>
@@ -83,7 +79,6 @@
     <ion-col>
         <ion-item>
           <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
-
           <ion-input placeholder="Telefono" type="number"></ion-input>
         </ion-item>
     </ion-col>
