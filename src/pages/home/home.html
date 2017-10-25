@@ -9,32 +9,70 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item>
-      <ion-label floating>Fecha de inicio</ion-label>
-      <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
-    </ion-item>
-  
-    <ion-item margin-top>
-      <ion-label floating>Fecha de fin</ion-label>
-      <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
-    </ion-item>
+    <ion-label text-center color="dark" class="title">
+      <strong>hotelz</strong>
+      <small>.com</small>
+    </ion-label>
   </ion-list>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-item>
-          <ion-label floating>Fecha de inicio</ion-label>
-          <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.arrive_date"></ion-datetime>
-        </ion-item>
-      </ion-col>
-      <ion-col col-6>
-        <ion-item>
-          <ion-label floating>Fecha de fin</ion-label>
-          <ion-datetime displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" [(ngModel)]="request.leave_date"></ion-datetime>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <!-- <ion-grid no-padding> -->
 
+  <ion-grid>
+    <form [formGroup]="formSearchRooms" (ngSubmit)="getRooms()">
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="search"></ion-icon> Ciudad</ion-label>
+            <ion-select formControlName="city" interface="action-sheet" cancelText="Cancelar">
+              <ion-option value="05001">Medellín</ion-option>
+              <ion-option value="11001">Bogotá</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>
+              <ion-icon name="calendar"></ion-icon> Ingreso</ion-label>
+            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" formControlName="arrive_date"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>
+              <ion-icon name="calendar"></ion-icon> Salida</ion-label>
+            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" formControlName="leave_date"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="people"></ion-icon> Huéspedes</ion-label>
+            <!-- <ion-icon name="people"></ion-icon> Número de huéspedes</ion-label> -->
+            <ion-select formControlName="hosts" interface="action-sheet" cancelText="Cancelar">
+              <ion-option value="1">1</ion-option>
+              <ion-option value="2">2</ion-option>
+              <ion-option value="3">3</ion-option>
+              <ion-option value="4">4</ion-option>
+              <ion-option value="5">5</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="grid"></ion-icon> Habitación</ion-label>
+            <!-- <ion-icon name="grid"></ion-icon> Tipo de habitación</ion-label> -->
+            <ion-select formControlName="room_type" interface="action-sheet" cancelText="Cancelar">
+              <ion-option value="s">Sencilla</ion-option>
+              <ion-option value="l">Lujosa</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 margin-top>
+          <button ion-button block color="light" [disabled]="!formSearchRooms.valid">Buscar</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
 </ion-content>

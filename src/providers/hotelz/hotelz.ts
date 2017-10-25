@@ -8,25 +8,33 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class HotelzProvider {
 
+  /*Endpoints
+    https://udeain.herokuapp.com/api/v1
+      - /rooms/arrive_date/01-01-2017/leave_date/02-02-2017/city/05001/hosts/3/room_type/l
+  */
+
   constructor(public http: Http) {}
 
   /**
    * Get the availables rooms from a petition http
    */
-  getAvalaibleRooms(){
+  getAvalaibleRooms(hotel_name: string, info: any){
     return new Promise((resolve, reject)=>{
-      this.http.get("assets/response-dezameron.json").subscribe(
-        (data) =>{
-          let response:any = data.json();
-          if(this.validateJson(response)){
-            resolve(response);
-          }else{
-            resolve(null);
+        let test = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"
+        let url = hotel_name + "/api/v1/rooms?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
+        console.log(url)
+        this.http.get(test).subscribe(
+          (data) =>{
+            let response:any = data.json();
+            if(this.validateJson(response)){
+              resolve(data.json());
+            }else{
+              resolve(null);
+            }
+          }, (error)=>{
+            reject(null);
           }
-        }, (error)=>{
-          reject(null);
-        }
-      );
+        );
     });
   }
 

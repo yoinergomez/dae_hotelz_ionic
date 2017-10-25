@@ -1,19 +1,27 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { HotelzProvider } from '../../providers/hotelz/hotelz';
-import { RequestSearchRooms } from "../../interfaces/request.interface";
+import { ListRoomsPage } from "../list-rooms/list-rooms";
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   templateUrl: 'home.html'
 })
 export class HomePage {
-  request: RequestSearchRooms;
   rooms: any = [];
-  constructor(public navCtrl: NavController, private _hotelzProvider: HotelzProvider) {
-    _hotelzProvider.getAvalaibleRooms().then((response)=>{
-      this.rooms = response;
-      console.log(this.rooms);
+  formSearchRooms: FormGroup;
+
+  constructor(public navCtrl: NavController, private formBuilder: FormBuilder) {
+    this.formSearchRooms = this.formBuilder.group({
+      arrive_date: [null, Validators.required],
+      leave_date: [null, Validators.required],
+      city: [null, Validators.required],
+      hosts: [null, Validators.required],
+      room_type: [null, Validators.required]
     });
-    this.request = {} as RequestSearchRooms;
   }
+
+  getRooms(event) {
+    this.navCtrl.push(ListRoomsPage, {"info": this.formSearchRooms.value})
+  }
+
 }
