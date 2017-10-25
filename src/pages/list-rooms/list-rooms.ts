@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
-import { ReservePage } from '../reserve/reserve';
+import { DetailPage } from '../detail/detail';
 
 @IonicPage()
 @Component({
@@ -26,7 +26,6 @@ export class ListRoomsPage {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
-          console.log(response.id);
 
           this.hotels_response.push(response)
           this.createListRooms(response)
@@ -64,6 +63,6 @@ export class ListRoomsPage {
   }
 
   reserve(room) {
-    this.navCtrl.push(ReservePage, {"room": room});
+    this.navCtrl.push(DetailPage, {"room": room});
   }
 }
