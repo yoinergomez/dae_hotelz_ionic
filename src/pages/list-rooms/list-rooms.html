@@ -37,7 +37,7 @@
 
   <ion-card *ngFor="let room of onlyRooms">
 
-    <ion-row>
+    <ion-row (click)="reserve(room)">
       <ion-col col-4 class="thumbnail">
         <img [src]="room.room_thumbnail">
       </ion-col>
