@@ -15,3 +15,33 @@ page-list-rooms {
     font-size: 80%;
   }
 }
+
+.container {
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.container img{
+    filter: brightness(0) invert(1);
+    border: 2px solid white;
+    padding: 5px;
+    background-color:transparent;
+}
+
+.toolbar-title {
+     color: white;
+}
+
+.toolbar img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin-left: 5px;
+}
+
+ion-title{
+    display: inline-block;
+}
+
+ion-header ion-icon.back-button-icon.icon {
+    color: white;
+}

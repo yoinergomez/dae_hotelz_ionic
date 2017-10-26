@@ -1,3 +1,32 @@
+.toolbar-background {
+    background-color: #3318d1;
+}
+
+.toolbar{
+  
+}
+
+.toolbar-title {
+     color: white;
+}
+
+.toolbar img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin-left: 5px;
+}
+
+ion-title{
+    display: inline-block;
+}
+
+.line{
+    height:50%;
+    border-bottom:1px solid white;
+    width:100%;
+    display:inline-block;
+    position:absolute;top:0
+}
 ion-content {
     background-image: url('../../assets/img/wallpaper.jpg');
     background-size: cover;
