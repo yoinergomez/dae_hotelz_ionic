@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
-import { ReservePage } from '../reserve/reserve';
+import { DetailPage } from '../detail/detail';
 
 @IonicPage()
 @Component({
@@ -13,7 +13,8 @@ export class ListRoomsPage {
   info: any;
   hotels_response: any = []
   onlyRooms = []
-  hotels_names = ["https://udeain.herokuapp.com", "response-udeainn.json", "response-colombiaresort.json"]
+  //hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/"]
+  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms"]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
@@ -25,6 +26,7 @@ export class ListRoomsPage {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
+
           this.hotels_response.push(response)
           this.createListRooms(response)
         })
@@ -61,6 +63,6 @@ export class ListRoomsPage {
   }
 
   reserve(room) {
-    this.navCtrl.push(ReservePage, {"room": room});
+    this.navCtrl.push(DetailPage, {"room": room});
   }
 }

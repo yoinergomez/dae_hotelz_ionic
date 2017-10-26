@@ -20,14 +20,17 @@ export class HotelzProvider {
    */
   getAvalaibleRooms(hotel_name: string, info: any){
     return new Promise((resolve, reject)=>{
-        let test = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"
-        let url = hotel_name + "/api/v1/rooms?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
+        let url = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"
+        //let url = hotel_name + "?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
         console.log(url)
-        this.http.get(test).subscribe(
+        this.http.get(url).subscribe(
           (data) =>{
             let response:any = data.json();
-            if(this.validateJson(response)){
-              resolve(data.json());
+            response.id = hotel_name;
+            resolve(response);
+            /*let response:any = data;
+            if(this.validateJson(JSON.parse(response._body))){
+              resolve(JSON.parse(response._body));
             }else{
               resolve(null);
             }

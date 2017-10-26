@@ -1,18 +1,19 @@
 page-list-rooms {
-  ion-card, ion-item {
-      background-color: #f6f6f6;
-      opacity: 0.8;
-      border-radius: 3px !important;
+  ion-card,
+  ion-item {
+    border-radius: 3px !important;
   }
-  ion-icon {
-    font-size: 80%;
-  }
-  h2 {
-    font-family: 'Flamante-Serif-Medium';
-    text-align: center;
-  }
+
   .small {
-    font-size: 80%;
+    background-color: #1bcc56;
+  }
+
+  .thumbnail {
+    /* width: auto !important; */
+  }
+
+  span > strong {
+    color: #c1272d;
   }
 }
 
