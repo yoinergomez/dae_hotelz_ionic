@@ -33,7 +33,7 @@ export class HotelzProvider {
               resolve(JSON.parse(response._body));
             }else{
               resolve(null);
-            }
+            }*/
           }, (error)=>{
             reject(null);
           }
