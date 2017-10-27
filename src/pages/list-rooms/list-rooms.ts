@@ -26,7 +26,7 @@ export class ListRoomsPage {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
         console.log(hotel_name);
-        
+
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
 
           this.hotels_response.push(response)
@@ -43,6 +43,9 @@ export class ListRoomsPage {
         room.hotel_name = hotel.hotel_name
         room.hotel_location= hotel.hotel_location.address
         room.hotel_url = hotel.id
+        room.hotel_website = hotel.hotel_website
+        room.check_in = hotel.check_in
+        room.check_out = hotel.check_out
         if(room.room_type=='l' || room.room_type=='L' ){
           room.room_type_str = 'Lujosa'
         }else{
