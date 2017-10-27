@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -20,8 +21,8 @@ export class HotelzProvider {
    */
   getAvalaibleRooms(hotel_name: string, info: any){
     return new Promise((resolve, reject)=>{
-        let url = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"
-        //let url = hotel_name + "?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
+        /*let url = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"*/
+        let url = hotel_name + "?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type
         console.log(url)
         this.http.get(url).subscribe(
           (data) =>{
@@ -39,6 +40,23 @@ export class HotelzProvider {
           }
         );
     });
+  }
+
+
+  /* Do reserve of a room with http post request hotel url */
+  doReserve(hotel_url:string,reserveInfo:any){
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return new Promise((resolve, reject)=>{
+      this.http.post(hotel_url,reserveInfo,options).subscribe(
+        (data) =>{
+          let response:any = data.json();     
+          resolve(response);
+        }, (error)=>{
+          reject(error);
+        }
+      );
+  });
   }
 
   /**

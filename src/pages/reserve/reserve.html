@@ -7,19 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>reserve</ion-title>
-  </ion-navbar>
-
-</ion-header>
+    <img src="../../assets/img/ICONO_2.png"  />
+    <ion-title>
+      Reserva
+    </ion-title>
+    </ion-navbar>
+  </ion-header>
 
 
 <ion-content padding>
 
-  <ion-list>
-      <ion-label text-center color="dark" class="title">
-        <strong>hotelz</strong><small>.com</small>
-      </ion-label>
-  </ion-list>
+  <div class="container">
+    <img src="../../assets/img/HOTELZ_NEGRO.png" width="200px" />
+  </div>
 
   <ion-row>
       <ion-card>
@@ -38,7 +38,7 @@
             </ion-col>
             <ion-col text-right>
               <ion-badge item-end>
-                {{room.room_type}}
+                {{room.room_type_str}}
               </ion-badge>
             </ion-col>
           </ion-row>
@@ -46,48 +46,50 @@
         </ion-item>
       </ion-card>
   </ion-row>
-
-  <ion-row>
-    <ion-col>
+  <form [formGroup]="formReserve" (ngSubmit)="reserve()">
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
+            <ion-input placeholder="Nombre" type="text" formControlName="name"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
         <ion-item>
-          <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
-          <ion-input placeholder="Nombre" type="text"></ion-input>
+            <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+            <ion-select interface="action-sheet" cancelText="Cancelar" formControlName="doc_type">
+                <ion-option value="cc" >C.C</ion-option>
+                <ion-option value="ti">T.I</ion-option>
+            </ion-select>
+          <ion-input placeholder="Documento" type="text" formControlName="doc_id"></ion-input>
         </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-12>
-      <ion-item>
-          <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
-          <ion-select interface="action-sheet" cancelText="Cancelar">
-              <ion-option value="cc" selected="true">C.C</ion-option>
-              <ion-option value="ti">T.I</ion-option>
-          </ion-select>
-        <ion-input placeholder="Documento" type="text"></ion-input>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-        <ion-item>
-          <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
-          <ion-input placeholder="Correo" type="email"></ion-input>
-        </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-        <ion-item>
-          <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
-          <ion-input placeholder="Telefono" type="number"></ion-input>
-        </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-12 margin-top>
-      <button ion-button block color="light">Reservar</button>
-    </ion-col>
-  </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
+            <ion-input placeholder="Correo" type="email" formControlName="email"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
+            <ion-input placeholder="Telefono" type="number" formControlName="phone_number"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 margin-top>
+        <button ion-button block color="light" [disabled]="!formReserve.valid">Reservar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+  
 
 
 </ion-content>
