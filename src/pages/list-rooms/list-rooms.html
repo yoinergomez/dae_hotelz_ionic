@@ -8,7 +8,7 @@
   <ion-navbar>
   <img src="../../assets/img/ICONO_2.png"  />
   <ion-title>
-    Rooms
+    Habitaciones
   </ion-title>
   </ion-navbar>
 </ion-header>
@@ -47,7 +47,7 @@
         <!-- <ion-col><p>Distribución: </p></ion-col> -->
         <ion-item>
           <ion-badge class="small">
-              {{room.room_type}}
+              {{room.room_type_str}}
           </ion-badge>
           <span item-end>
             <strong>{{room.price | currency:'USD':true}}</strong>

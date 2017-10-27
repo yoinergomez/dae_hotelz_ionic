@@ -14,7 +14,7 @@ export class ListRoomsPage {
   hotels_response: any = []
   onlyRooms = []
   //hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/"]
-  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms"]
+  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms"]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
@@ -25,6 +25,8 @@ export class ListRoomsPage {
   getRooms() {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
+        console.log(hotel_name);
+        
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
 
           this.hotels_response.push(response)
@@ -37,12 +39,14 @@ export class ListRoomsPage {
   createListRooms(hotel_response:any){
       let hotel = hotel_response
       for(let room of hotel.rooms){
+        room.hotel_id = hotel.hotel_id
         room.hotel_name = hotel.hotel_name
         room.hotel_location= hotel.hotel_location.address
-        if(room.room_type=='l'){
-          room.room_type = "Lujosa"
+        room.hotel_url = hotel.id
+        if(room.room_type=='l' || room.room_type=='L' ){
+          room.room_type_str = 'Lujosa'
         }else{
-          room.room_type = "Secilla"
+          room.room_type_str = 'Sencilla'
         }
         this.onlyRooms.push(room)
       }
@@ -63,6 +67,7 @@ export class ListRoomsPage {
   }
 
   reserve(room) {
-    this.navCtrl.push(DetailPage, {"room": room});
+    this.navCtrl.push(DetailPage, {"room": room,"arrive_date":this.info.arrive_date,
+    "leave_date":this.info.leave_date});
   }
 }
