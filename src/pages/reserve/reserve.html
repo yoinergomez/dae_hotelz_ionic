@@ -46,53 +46,62 @@
         </ion-item>
       </ion-card>
   </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
+            <ion-input placeholder="Nombre" maxlength="100" type="text" required></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+          <ion-item>
+            <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+            <ion-select required>
+              <ion-option value="cc">Cédula de ciudadanéa</ion-option>
+              <ion-option value="ti">Tarjeta de identidad</ion-option>
+            </ion-select>
+          </ion-item>
+      </ion-col>
+      <ion-col col-8>
+        <ion-item>
+          <ion-input placeholder="Documento" type="text" maxlength="100" onkeydown="return ( event.ctrlKey || event.altKey 
+          || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+          || (95<event.keyCode && event.keyCode<106)
+          || (event.keyCode==8) || (event.keyCode==9) 
+          || (event.keyCode>34 && event.keyCode<40) 
+          || (event.keyCode==46) )"> required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
+            <ion-input placeholder="Correo electronico" maxlength="100" type="email" required></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
 
-  <ion-row>
-    <ion-col>
-        <ion-item>
-          <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
-          <ion-input placeholder="Nombre" type="text"></ion-input>
-        </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-4>
-        <ion-item>
-          <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
-          <ion-select>
-            <ion-option value="cc">cc</ion-option>
-            <ion-option value="ti">ti</ion-option>
-          </ion-select>
-        </ion-item>
-    </ion-col>
-    <ion-col col-8>
-      <ion-item>
-        <ion-input placeholder="Documento" type="text"></ion-input>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-        <ion-item>
-          <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
-          <ion-input placeholder="Correo" type="email"></ion-input>
-        </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-        <ion-item>
-          <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
-
-          <ion-input placeholder="Telefono" type="number"></ion-input>
-        </ion-item>
-    </ion-col>
-  </ion-row>
-  <ion-row>
+            <ion-input placeholder="Teléfono" type="text" maxlength="100"
+            onkeydown="return ( event.ctrlKey || event.altKey 
+            || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false) 
+            || (95<event.keyCode && event.keyCode<106)
+            || (event.keyCode==8) || (event.keyCode==9) 
+            || (event.keyCode>34 && event.keyCode<40) 
+            || (event.keyCode==46) )"> required></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
     <ion-col col-12 margin-top>
-      <button ion-button block color="light">Reservar</button>
+      <button type="submit" ion-button block color="light" class="btn btn-success" [disabled]="!name">Reservar</button>
     </ion-col>
   </ion-row>
-
 
 </ion-content>

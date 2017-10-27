@@ -1,26 +1,28 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ReservePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FormBuilder } from '@angular/forms';
 
 @IonicPage()
 @Component({
   selector: 'page-reserve',
   templateUrl: 'reserve.html',
 })
+
 export class ReservePage {
 
   room: any;
   person: any;
-
+  submitted = false;
+  name = true;
+  
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.room = this.navParams.get('room');
     console.log(this.room);
   }
-
+  /*slideTwoForm = this.formBuilder.group({
+    username: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z]*')])],
+    privacy: ['', Validators.required],
+    bio: ['']
+});*/
 }
