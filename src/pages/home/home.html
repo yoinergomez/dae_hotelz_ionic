@@ -1,19 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Hotelz
-    </ion-title>
+  <img src="../../assets/img/ICONO_2.png"  />
+  <ion-title>
+    Hotelz
+  </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-list>
-    <ion-label text-center color="dark" class="title">
-      <strong>hotelz</strong>
-      <small>.com</small>
-    </ion-label>
-  </ion-list>
+ 
 
   <!-- <ion-grid no-padding> -->
 
@@ -64,13 +60,14 @@
               <ion-icon name="grid"></ion-icon> Habitación</ion-label>
             <!-- <ion-icon name="grid"></ion-icon> Tipo de habitación</ion-label> -->
             <ion-select formControlName="room_type" interface="action-sheet" cancelText="Cancelar">
-              <ion-option value="s">Sencilla</ion-option>
-              <ion-option value="l">Lujosa</ion-option>
+              <ion-option value="S">Sencilla</ion-option>
+              <ion-option value="L">Lujosa</ion-option>
             </ion-select>
           </ion-item>
         </ion-col>
         <ion-col col-12 margin-top>
           <button ion-button block color="light" [disabled]="!formSearchRooms.valid">Buscar</button>
+          <!-- <button ion-button block color="light">Buscar</button> -->
         </ion-col>
       </ion-row>
     </form>

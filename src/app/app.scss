@@ -34,3 +34,21 @@
     font-style: normal;
     src: url('../assets/fonts/HelveticaNeue-Roman.otf');
 }
+
+.toolbar-background {
+    background-color: #3318d1;
+}
+
+.toolbar-title {
+     color: white;
+}
+
+.toolbar img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin-left: 5px;
+}
+
+ion-title{
+    display: inline-block;
+}

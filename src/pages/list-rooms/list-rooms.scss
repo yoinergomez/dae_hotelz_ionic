@@ -1,17 +1,48 @@
 page-list-rooms {
-  ion-card, ion-item {
-      background-color: #f6f6f6;
-      opacity: 0.8;
-      border-radius: 3px !important;
+  ion-card,
+  ion-item {
+    border-radius: 3px !important;
   }
-  ion-icon {
-    font-size: 80%;
-  }
-  h2 {
-    font-family: 'Flamante-Serif-Medium';
-    text-align: center;
-  }
+
   .small {
-    font-size: 80%;
+    background-color: #1bcc56;
   }
+
+  .thumbnail {
+    /* width: auto !important; */
+  }
+
+  span > strong {
+    color: #c1272d;
+  }
+}
+
+.container {
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.container img{
+    filter: brightness(0) invert(1);
+    border: 2px solid white;
+    padding: 5px;
+    background-color:transparent;
+}
+
+.toolbar-title {
+     color: white;
+}
+
+.toolbar img{
+    width: 30px;
+    filter: brightness(0) invert(1);
+    margin-left: 5px;
+}
+
+ion-title{
+    display: inline-block;
+}
+
+ion-header ion-icon.back-button-icon.icon {
+    color: white;
 }
