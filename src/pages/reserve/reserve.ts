@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms'
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { AlertController } from 'ionic-angular';
 
+import { HomePage } from '../home/home';
+
 /**
  * Generated class for the ReservePage page.
  *
@@ -60,9 +62,14 @@ export class ReservePage {
     this._hotelzProvider.doReserve(hotel_url,reserveInfo).then((response) => {
       this.responseSuccess= response;
       const alert = this.alertCtrl.create({
-        title: 'Reserva exitosa',
+        title: '¡Reserva exitosa!',
         subTitle: 'Su código de reserva es: '+ this.responseSuccess.reservation_id ,
-        buttons: ['Ok']
+        buttons: [{
+          text:'Ok',
+          handler: () => {
+            this.navCtrl.push(HomePage)
+          }
+        }]
       });
       alert.present();
       
@@ -71,11 +78,17 @@ export class ReservePage {
       const alert = this.alertCtrl.create({
         title: 'Error en la reserva',
         subTitle: 'La reserva no se pudó completar',
-        buttons: ['Ok']
+        buttons: [{
+          text:'Ok',
+          handler: () => {
+            this.navCtrl.push(HomePage)
+          }
+        }]
       });
       alert.present();
     })
-      
+    
+
   }
     
 }
