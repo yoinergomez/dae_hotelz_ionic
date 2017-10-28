@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 
 /**
@@ -26,13 +26,14 @@ export class ReservePage {
     private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider) {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
-      name: [null, Validators.required],
-      doc_type: [null, Validators.required],
-      doc_id: [null, Validators.required],
-      email: [null, Validators.required],
-      phone_number: [null, Validators.required]
+      name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+')]],
+      doc_type: ['', [Validators.required]],
+      doc_id: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(11)]],
+      email: ['', [Validators.required, Validators.email, Validators.minLength(7), Validators.maxLength(50)]],
+      phone_number: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(7), Validators.maxLength(15)]]
   });
   }
+ 
   
 
   /**Method called from the reserve button. It builds the json and it is sent to provider */
