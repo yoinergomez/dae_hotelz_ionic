@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { DetailPage } from '../detail/detail';
+import { API_GO, API_NODE, API_SCALA, API_PYTHON } from '../../global'
 
 @IonicPage()
 @Component({
@@ -13,9 +14,8 @@ export class ListRoomsPage {
   info: any;
   hotels_response: any = []
   onlyRooms = []
-  
-  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms",
-                  "https://hotelz-python-api.herokuapp.com/V1/rooms","https://api-hotelz-node.herokuapp.com/v1/rooms"]
+
+  hotels_names = [API_NODE, API_PYTHON, API_GO, API_SCALA]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
