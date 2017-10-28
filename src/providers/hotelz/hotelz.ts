@@ -42,6 +42,22 @@ export class HotelzProvider {
     });
   }
 
+  /*getAvalaibleRooms(hotel_name: string, info: any){
+  return new Promise((resolve, reject)=>{
+    this.http.get("assets/response-dezameron.json").subscribe(
+      (data) =>{
+        let response:any = data;
+        if(this.validateJson(JSON.parse(response._body))){
+          resolve(JSON.parse(response._body));
+        }else{
+          resolve(null);
+        }
+      }, (error)=>{
+        reject(null);
+      }
+    );
+  });
+  }*/
 
   /* Do reserve of a room with http post request hotel url */
   doReserve(hotel_url:string,reserveInfo:any){
@@ -50,10 +66,13 @@ export class HotelzProvider {
     return new Promise((resolve, reject)=>{
       this.http.post(hotel_url,reserveInfo,options).subscribe(
         (data) =>{
+          console.log(data);
+          
           let response:any = data.json();     
           resolve(response);
         }, (error)=>{
-          reject(error);
+          let errorMessage:any = error.json(); 
+          reject(errorMessage);
         }
       );
   });

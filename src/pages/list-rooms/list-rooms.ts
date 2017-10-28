@@ -14,7 +14,12 @@ export class ListRoomsPage {
   hotels_response: any = []
   onlyRooms = []
   //hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/"]
+<<<<<<< HEAD
   hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/","https://api-hotelz-node.herokuapp.com/v1/rooms"]
+=======
+  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms",
+                  "https://hotelz-python-api.herokuapp.com/V1/rooms","https://api-hotelz-node.herokuapp.com/v1/rooms"]
+>>>>>>> 7e90d3a434feeae18c42763461a01425ec1121e0
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
@@ -28,7 +33,6 @@ export class ListRoomsPage {
         console.log(hotel_name);
 
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
-
           this.hotels_response.push(response)
           this.createListRooms(response)
         })
@@ -43,6 +47,11 @@ export class ListRoomsPage {
         room.hotel_name = hotel.hotel_name
         room.hotel_location= hotel.hotel_location.address
         room.hotel_url = hotel.id
+        room.hotel_website = hotel.hotel_website
+        room.check_in = hotel.check_in
+        room.check_out = hotel.check_out
+        room.hotel_thumbnail = hotel.hotel_thumbnail
+
         if(room.room_type=='l' || room.room_type=='L' ){
           room.room_type_str = 'Lujosa'
         }else{
