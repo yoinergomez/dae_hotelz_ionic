@@ -55,17 +55,28 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-12>
+
+      <ion-col>
         <ion-item>
-            <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
-            <ion-select formControlName="doc_type" interface="action-sheet" cancelText="Cancelar">
-                <ion-option value="cc" >C.C</ion-option>
-                <ion-option value="ti">T.I</ion-option>
-            </ion-select>
-          <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
-        </ion-item>
+        <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+        <ion-select formControlName="doc_type" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="cc" >Cedula</ion-option>
+            <ion-option value="ti">Tarjeta de Identidad</ion-option>
+        </ion-select>
+      </ion-item>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+         <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+
     <ion-row>
       <ion-col>
           <ion-item>
