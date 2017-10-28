@@ -14,7 +14,8 @@ export class ListRoomsPage {
   hotels_response: any = []
   onlyRooms = []
   //hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/"]
-  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms"]
+  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms",
+                  "https://hotelz-python-api.herokuapp.com/V1/rooms","https://api-hotelz-node.herokuapp.com/v1/rooms"]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
@@ -25,8 +26,6 @@ export class ListRoomsPage {
   getRooms() {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
-        console.log(hotel_name);
-        
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
 
           this.hotels_response.push(response)

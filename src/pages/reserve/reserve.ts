@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
+import { AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the ReservePage page.
@@ -21,9 +22,12 @@ export class ReservePage {
   room: any;
   person: any;
   formReserve: FormGroup;
+  responseSuccess: any;
+  responseError: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider) {
+    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider, 
+    private  alertCtrl: AlertController) {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
       name: [null, Validators.required],
@@ -52,14 +56,23 @@ export class ReservePage {
       }
     };
     let hotel_url = this.room.hotel_url +'/reserve'
-    console.log(reserveInfo);
     this._hotelzProvider.doReserve(hotel_url,reserveInfo).then((response) => {
-      console.log(response);
+      this.responseSuccess= response;
+      const alert = this.alertCtrl.create({
+        title: 'Reserva exitosa',
+        subTitle: 'Su código de reserva es: '+ this.responseSuccess.reservation_id ,
+        buttons: ['Ok']
+      });
+      alert.present();
       
     })
     .catch((error)=>{
-      let errorMessage = error._body
-      console.log('Error',errorMessage);
+      const alert = this.alertCtrl.create({
+        title: 'Error en la reserva',
+        subTitle: 'La reserva no se pudó completar',
+        buttons: ['Ok']
+      });
+      alert.present();
     })
       
   }
