@@ -1,3 +1,23 @@
-page-home {
 
+ion-content {
+    background-image: url('../../assets/img/wallpaper.jpg');
+    background-size: cover;
+}
+
+page-home {
+    ion-item {
+        background-color: #f6f6f6;
+        opacity: 0.8;
+        border-radius: 3px !important;
+    }
+}
+
+.action-sheet-cancel {
+    color: red !important;
+}
+
+.title {
+    font-size: 60px;
+    color: #f7931e;
+    font-family: 'Flamante-Serif-Medium';
 }

@@ -1,4 +1,4 @@
-# 🏨 Hotelz app 🏨
+# 🏨 Hotelz app v1.0 🏨
 This is a hybrid mobile application that was developed in ionic 2 for _desarrollo de aplicaciones empresariales_ course.
 
 ## 🔧 Requirements

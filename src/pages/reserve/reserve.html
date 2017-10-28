@@ -1,0 +1,103 @@
+<!--
+  Generated template for the ReservePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <img src="../../assets/img/ICONO_2.png"  />
+    <ion-title>
+      Reserva
+    </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <div class="container">
+    <img src="../../assets/img/HOTELZ_NEGRO.png" width="200px" />
+  </div>
+
+  <ion-row>
+    <ion-card>
+
+      <ion-row>
+        <ion-thumbnail col-4 class="thumbnail">
+          <img [src]="room.room_thumbnail">
+        </ion-thumbnail>
+        <ion-col>
+          <h2 style="padding-top: 5px;">{{room.hotel_name}}</h2>
+          <ion-icon text-wrap name="pin" style="margin-top: 7px;"> {{room.hotel_location}}</ion-icon>
+          <!-- <ion-col><p>Distribución: </p></ion-col> -->
+          <ion-item>
+            <ion-badge class="small">
+                {{room.room_type_str}}
+            </ion-badge>
+            <span item-end>
+              <strong>{{room.price | currency:'USD':true}}</strong>
+            </span>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <form novalidate [formGroup]="formReserve" (ngSubmit)="reserve()">
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
+            <ion-input placeholder="Nombre" type="text" formControlName="name" maxlength="50"
+            onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+            <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+            <ion-select interface="action-sheet" cancelText="Cancelar" formControlName="doc_type">
+                <ion-option value="cc" >C.C</ion-option>
+                <ion-option value="ti">T.I</ion-option>
+            </ion-select>
+          <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"
+            onkeydown="return ( event.ctrlKey || event.altKey
+            || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
+            || (95<event.keyCode && event.keyCode<106)
+            || (event.keyCode==8) || (event.keyCode==9)
+            || (event.keyCode>34 && event.keyCode<40)
+            || (event.keyCode==46) )"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
+            <ion-input placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
+            <ion-input placeholder="Teléfono" type="text" formControlName="phone_number" maxlength="15"
+              onkeydown="return ( event.ctrlKey || event.altKey
+              || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
+              || (95<event.keyCode && event.keyCode<106)
+              || (event.keyCode==8) || (event.keyCode==9)
+              || (event.keyCode>34 && event.keyCode<40)
+              || (event.keyCode==46) )"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 margin-top>
+        <button ion-button block color="light" [disabled]="!formReserve.valid">Reservar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
