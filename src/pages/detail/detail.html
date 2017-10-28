@@ -16,22 +16,7 @@
 
 
 <ion-content>
-  <!--   <ion-card>
-    <ion-card-content>
-      <img [src]="room.room_thumbnail" alt="">
-      <ion-card-title>
-        {{room.hotel_name}}
-      </ion-card-title>
-      {{room.hotel_location}}
-      <p>
-        {{room.description}}
-      </p>
-      <button ion-button block (click)="reserve()">
-        Reservar
-      </button>
-    </ion-card-content>
-  </ion-card> -->
-  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/7f/67/f1/gran-hotel-manzana-kempinski.jpg" />
+  <img [src]="room.hotel_thumbnail" />
   <div padding>
     <h1 text-center text-capitalize>{{room.hotel_name}}</h1>
 
@@ -89,7 +74,7 @@
       <ion-col col-12>
         <p>{{room.description}}</p>
       </ion-col>
-      <button ion-button block color="light" (click)="reserve()">Reservar</button>
+      <button ion-button block class="badge" (click)="reserve()">Reservar</button>
     </ion-row>
   </div>
 </ion-content>
