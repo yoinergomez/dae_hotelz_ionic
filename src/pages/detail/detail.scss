@@ -1,3 +1,17 @@
 page-detail {
+  span {
+    font-size: 1.5em;
+    width: 100%;
+  }
+  ion-content {
+    background: #fff !important;
+  }
 
+  .badge {
+    background-color: #1bcc56;
+  }
+
+  .price {
+    color: #c1272d;
+  }
 }

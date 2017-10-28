@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
+import { AlertController } from 'ionic-angular';
+
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the ReservePage page.
@@ -15,23 +18,29 @@ import { HotelzProvider } from '../../providers/hotelz/hotelz';
   selector: 'page-reserve',
   templateUrl: 'reserve.html',
 })
+
 export class ReservePage {
 
   room: any;
   person: any;
   formReserve: FormGroup;
+  responseSuccess: any;
+  responseError: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider) {
+    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider, 
+    private  alertCtrl: AlertController) {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
-      name: [null, Validators.required],
-      doc_type: [null, Validators.required],
-      doc_id: [null, Validators.required],
-      email: [null, Validators.required],
-      phone_number: [null, Validators.required]
+      name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+')]],
+      doc_type: ['', [Validators.required]],
+      doc_id: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(11)]],
+      email: ['', [Validators.required, Validators.email, Validators.minLength(7), Validators.maxLength(50)]],
+      phone_number: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(7), Validators.maxLength(15)]]
   });
   }
+ 
+  
 
   /**Method called from the reserve button. It builds the json and it is sent to provider */
   reserve(event) {
@@ -50,16 +59,36 @@ export class ReservePage {
       }
     };
     let hotel_url = this.room.hotel_url +'/reserve'
-    console.log(reserveInfo);
     this._hotelzProvider.doReserve(hotel_url,reserveInfo).then((response) => {
-      console.log(response);
+      this.responseSuccess= response;
+      const alert = this.alertCtrl.create({
+        title: '¡Reserva exitosa!',
+        subTitle: 'Su código de reserva es: '+ this.responseSuccess.reservation_id ,
+        buttons: [{
+          text:'Ok',
+          handler: () => {
+            this.navCtrl.push(HomePage)
+          }
+        }]
+      });
+      alert.present();
       
     })
     .catch((error)=>{
-      let errorMessage = error._body
-      console.log(errorMessage);
+      const alert = this.alertCtrl.create({
+        title: 'Error en la reserva',
+        subTitle: 'La reserva no se pudó completar',
+        buttons: [{
+          text:'Ok',
+          handler: () => {
+            this.navCtrl.push(HomePage)
+          }
+        }]
+      });
+      alert.present();
     })
-      
+    
+
   }
     
 }
