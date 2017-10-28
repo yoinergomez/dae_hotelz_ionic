@@ -46,6 +46,8 @@ export class ListRoomsPage {
         room.hotel_website = hotel.hotel_website
         room.check_in = hotel.check_in
         room.check_out = hotel.check_out
+        room.hotel_thumbnail = hotel.hotel_thumbnail
+
         if(room.room_type=='l' || room.room_type=='L' ){
           room.room_type_str = 'Lujosa'
         }else{

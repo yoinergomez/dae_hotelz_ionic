@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
- 
+
 
   <!-- <ion-grid no-padding> -->
 
@@ -30,14 +30,14 @@
           <ion-item>
             <ion-label stacked>
               <ion-icon name="calendar"></ion-icon> Ingreso</ion-label>
-            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" formControlName="arrive_date"></ion-datetime>
+            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" [min]="today" [(ngModel)]="arrive_date" max="2020-10-31" formControlName="arrive_date"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col col-6>
           <ion-item>
             <ion-label stacked>
               <ion-icon name="calendar"></ion-icon> Salida</ion-label>
-            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" min="2017" max="2020-10-31" formControlName="leave_date"></ion-datetime>
+            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" [min]="arrive_date" max="2020-10-31" formControlName="leave_date"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col>
