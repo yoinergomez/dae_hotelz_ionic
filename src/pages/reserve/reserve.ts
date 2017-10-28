@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { AlertController } from 'ionic-angular';
 
@@ -28,7 +28,7 @@ export class ReservePage {
   responseError: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider, 
+    private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider,
     private  alertCtrl: AlertController) {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
@@ -39,8 +39,8 @@ export class ReservePage {
       phone_number: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(7), Validators.maxLength(15)]]
   });
   }
- 
-  
+
+
 
   /**Method called from the reserve button. It builds the json and it is sent to provider */
   reserve(event) {
@@ -72,7 +72,7 @@ export class ReservePage {
         }]
       });
       alert.present();
-      
+
     })
     .catch((error)=>{
       const alert = this.alertCtrl.create({
@@ -87,10 +87,8 @@ export class ReservePage {
       });
       alert.present();
     })
-    
+
 
   }
-    
+
 }
-
-
