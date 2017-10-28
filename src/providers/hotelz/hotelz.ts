@@ -66,10 +66,13 @@ export class HotelzProvider {
     return new Promise((resolve, reject)=>{
       this.http.post(hotel_url,reserveInfo,options).subscribe(
         (data) =>{
+          console.log(data);
+          
           let response:any = data.json();     
           resolve(response);
         }, (error)=>{
-          reject(error);
+          let errorMessage:any = error.json(); 
+          reject(errorMessage);
         }
       );
   });
