@@ -2,5 +2,7 @@
   "name": "dae_hotelz_ionic",
   "app_id": "85bc98d3",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
