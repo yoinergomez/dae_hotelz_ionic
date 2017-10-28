@@ -33,7 +33,7 @@ export class ReservePage {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+')]],
-      doc_type: ['', [Validators.required]],
+      doc_type: [null, [Validators.required]],
       doc_id: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(11)]],
       email: ['', [Validators.required, Validators.email, Validators.minLength(7), Validators.maxLength(50)]],
       phone_number: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(7), Validators.maxLength(15)]]
