@@ -38,9 +38,9 @@
   <ion-card *ngFor="let room of onlyRooms">
 
     <ion-row (click)="reserve(room)">
-      <ion-col col-4 class="thumbnail">
+      <ion-thumbnail col-4 class="thumbnail">
         <img [src]="room.room_thumbnail">
-      </ion-col>
+      </ion-thumbnail>
       <ion-col>
         <h2 style="padding-top: 5px;">{{room.hotel_name}}</h2>
         <ion-icon text-wrap name="pin" style="margin-top: 7px;"> {{room.hotel_location}}</ion-icon>

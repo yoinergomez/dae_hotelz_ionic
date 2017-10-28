@@ -22,29 +22,27 @@
   </div>
 
   <ion-row>
-      <ion-card>
-        <ion-item>
+    <ion-card>
 
-          <ion-thumbnail item-start>
-            <img [src]="room.room_thumbnail">
-          </ion-thumbnail>
-          <h2>{{room.hotel_name}}</h2>
-          <ion-icon class="small" text-wrap name="pin"> {{room.hotel_location}}</ion-icon>
-
-          <ion-row>
-            <ion-col class="small">
-              <p>Camas Dobles:</p> <p text-right>  {{room.beds.double}}</p>
-              <p>Camas Sencillas:</p> <p text-right> {{room.beds.simple}}</p>
-            </ion-col>
-            <ion-col text-right>
-              <ion-badge item-end>
+      <ion-row>
+        <ion-thumbnail col-4 class="thumbnail">
+          <img [src]="room.room_thumbnail">
+        </ion-thumbnail>
+        <ion-col>
+          <h2 style="padding-top: 5px;">{{room.hotel_name}}</h2>
+          <ion-icon text-wrap name="pin" style="margin-top: 7px;"> {{room.hotel_location}}</ion-icon>
+          <!-- <ion-col><p>Distribución: </p></ion-col> -->
+          <ion-item>
+            <ion-badge class="small">
                 {{room.room_type_str}}
-              </ion-badge>
-            </ion-col>
-          </ion-row>
-
-        </ion-item>
-      </ion-card>
+            </ion-badge>
+            <span item-end>
+              <strong>{{room.price | currency:'USD':true}}</strong>
+            </span>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-card>
   </ion-row>
   <form [formGroup]="formReserve" (ngSubmit)="reserve()">
     <ion-row>
@@ -89,7 +87,7 @@
       </ion-col>
     </ion-row>
   </form>
-  
+
 
 
 </ion-content>
