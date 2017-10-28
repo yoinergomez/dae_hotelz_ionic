@@ -13,13 +13,9 @@ export class ListRoomsPage {
   info: any;
   hotels_response: any = []
   onlyRooms = []
-  //hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/"]
-<<<<<<< HEAD
-  hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms", "https://hotelz-python-api.herokuapp.com/V1/rooms/","https://api-hotelz-node.herokuapp.com/v1/rooms"]
-=======
+  
   hotels_names = ["https://udeain.herokuapp.com/api/v1/rooms","https://dezameron-api-dae.herokuapp.com/v1/rooms",
                   "https://hotelz-python-api.herokuapp.com/V1/rooms","https://api-hotelz-node.herokuapp.com/v1/rooms"]
->>>>>>> 7e90d3a434feeae18c42763461a01425ec1121e0
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider) {
