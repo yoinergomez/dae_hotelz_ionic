@@ -10,7 +10,7 @@ import { ListRoomsPage } from "../pages/list-rooms/list-rooms";
 import { HotelzProvider } from '../providers/hotelz/hotelz';
 import { ReservePage } from '../pages/reserve/reserve';
 import { DetailPage } from '../pages/detail/detail';
-
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { DetailPage } from '../pages/detail/detail';
     HomePage,
     ListRoomsPage,
     ReservePage,
-    DetailPage
+    DetailPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { DetailPage } from '../pages/detail/detail';
     HomePage,
     ListRoomsPage,
     ReservePage,
-    DetailPage
+    DetailPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
