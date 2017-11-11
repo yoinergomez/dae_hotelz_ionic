@@ -1,4 +1,7 @@
 # 🏨 Hotelz app v1.0 🏨
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/be80366ba69242df8f814c3ad896a437)](https://www.codacy.com/app/FrankAlexis/dae_hotelz_ionic?utm_source=github.com&utm_medium=referral&utm_content=yoinergomez/dae_hotelz_ionic&utm_campaign=badger)
+
 This is a hybrid mobile application that was developed in ionic 2 for _desarrollo de aplicaciones empresariales_ course.
 
 ## 🔧 Requirements
