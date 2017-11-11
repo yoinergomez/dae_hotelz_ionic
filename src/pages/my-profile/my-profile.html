@@ -7,7 +7,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>my-profile</ion-title>
+    <img src="./assets/img/ICONO_2.png"  />
+    <ion-title>Mi Perfil</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +16,79 @@
 
 <ion-content padding>
 
+
+  <ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="./assets/img/profile-icon.png" alt="">
+    </ion-avatar>
+    <h1>Pedro Perez</h1>
+  </ion-item>
+
+  <ion-card-content>
+    <p>Cedula: 1152454724</p>
+    <p>Correo: predro.perez@gmail.com</p>
+    <p>Telefono: 3206600085</p>
+  </ion-card-content>
+
+</ion-card>
+
+  <form novalidate [formGroup]="formReserve" (ngSubmit)="reserve()">
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
+            <ion-input placeholder="Nombre" type="text" formControlName="name" maxlength="50"
+            onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <ion-col>
+        <ion-item>
+        <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+        <ion-select formControlName="doc_type" interface="action-sheet" cancelText="Cancelar">
+            <ion-option value="cc" >Cedula</ion-option>
+            <ion-option value="ti">Tarjeta de Identidad</ion-option>
+        </ion-select>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+         <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
+       </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
+            <ion-input placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
+            <ion-input placeholder="Teléfono" type="text" formControlName="phone_number" maxlength="15"
+              onkeydown="return ( event.ctrlKey || event.altKey
+              || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
+              || (95<event.keyCode && event.keyCode<106)
+              || (event.keyCode==8) || (event.keyCode==9)
+              || (event.keyCode>34 && event.keyCode<40)
+              || (event.keyCode==46) )"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 margin-top>
+        <button ion-button block color="light" [disabled]="!formReserve.valid">Actualizar datos</button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
