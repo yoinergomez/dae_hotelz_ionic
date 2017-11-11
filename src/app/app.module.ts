@@ -11,6 +11,7 @@ import { HotelzProvider } from '../providers/hotelz/hotelz';
 import { ReservePage } from '../pages/reserve/reserve';
 import { DetailPage } from '../pages/detail/detail';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MyProfilePage } from '../pages/my-profile/my-profile'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ListRoomsPage,
     ReservePage,
     DetailPage,
-    TabsPage
+    TabsPage,
+    MyProfilePage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     ListRoomsPage,
     ReservePage,
     DetailPage,
-    TabsPage
+    TabsPage,
+    MyProfilePage
   ],
   providers: [
     StatusBar,
