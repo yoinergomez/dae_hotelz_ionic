@@ -1,10 +1,13 @@
 # 🏨 Hotelz app v1.0 🏨 
 This is a hybrid mobile application that was developed in ionic 2 for _desarrollo de aplicaciones empresariales_ course.
 
-[ ![Codeship Status for yoinergomez/dae_hotelz_ionic](https://app.codeship.com/projects/f2bd8040-9dbb-0135-c2a5-3a09837b7f1f/status?branch=master)](https://app.codeship.com/projects/253346)
-[![codecov](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic/branch/master/graph/badge.svg)](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic)
-[ ![Codeship Status for yoinergomez/dae_hotelz_ionic](https://app.codeship.com/projects/f2bd8040-9dbb-0135-c2a5-3a09837b7f1f/status?branch=develop)](https://app.codeship.com/projects/253346)
-[![codecov](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic/branch/develop/graph/badge.svg)](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic)
+| Master | Develop |
+|--------|---------|
+|   [ ![Codeship Status for yoinergomez/dae_hotelz_ionic](https://app.codeship.com/projects/f2bd8040-9dbb-0135-c2a5-3a09837b7f1f/status?branch=master)](https://app.codeship.com/projects/253346)     |       [ ![Codeship Status for yoinergomez/dae_hotelz_ionic](https://app.codeship.com/projects/f2bd8040-9dbb-0135-c2a5-3a09837b7f1f/status?branch=develop)](https://app.codeship.com/projects/253346)  | 
+|  [![codecov](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic/branch/master/graph/badge.svg)](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic)      |    [![codecov](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic/branch/develop/graph/badge.svg)](https://codecov.io/gh/yoinergomez/dae_hotelz_ionic)     |
+|   aquí va master    |   [![Codacy Badge](https://api.codacy.com/project/badge/Grade/be80366ba69242df8f814c3ad896a437)](https://www.codacy.com/app/FrankAlexis/dae_hotelz_ionic?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yoinergomez/dae_hotelz_ionic&amp;utm_campaign=Badge_Grade)      |
+
+
 
 ## 🔧 Requirements
 That version or above
