@@ -1,0 +1,20 @@
+page-my-profile {
+  ion-item, ion-card {
+      background-color: #f6f6f6;
+      opacity: 0.8;
+      border-radius: 3px !important;
+  }
+
+  ion-card {
+    opacity: 1;
+  }
+
+  h2 {
+    font-family: 'Flamante-Serif-Medium';
+    text-align: center;
+  }
+  .small {
+    font-size: 80%;
+  }
+
+}
