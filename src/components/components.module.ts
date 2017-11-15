@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { ArithmeticComponent } from './arithmetic/arithmetic';
 @NgModule({
-	declarations: [ArithmeticComponent],
+	declarations: [],
 	imports: [],
-	exports: [ArithmeticComponent]
+	exports: []
 })
 export class ComponentsModule {}

@@ -67,7 +67,7 @@ export class ReservePage {
         buttons: [{
           text:'Ok',
           handler: () => {
-            this.navCtrl.push(HomePage)
+            this.navCtrl.setRoot(HomePage)
           }
         }]
       });
@@ -81,7 +81,7 @@ export class ReservePage {
         buttons: [{
           text:'Ok',
           handler: () => {
-            this.navCtrl.push(HomePage)
+            this.navCtrl.setRoot(HomePage)
           }
         }]
       });

@@ -10,7 +10,9 @@ import { ListRoomsPage } from "../pages/list-rooms/list-rooms";
 import { HotelzProvider } from '../providers/hotelz/hotelz';
 import { ReservePage } from '../pages/reserve/reserve';
 import { DetailPage } from '../pages/detail/detail';
-
+import { TabsPage } from '../pages/tabs/tabs';
+import { MyProfilePage } from '../pages/my-profile/my-profile';
+import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { DetailPage } from '../pages/detail/detail';
     HomePage,
     ListRoomsPage,
     ReservePage,
-    DetailPage
+    DetailPage,
+    MyProfilePage,
+    MyReservationsPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,10 @@ import { DetailPage } from '../pages/detail/detail';
     HomePage,
     ListRoomsPage,
     ReservePage,
-    DetailPage
+    DetailPage,
+    MyProfilePage,
+    MyReservationsPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
