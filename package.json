@@ -13,8 +13,8 @@
     "test": "karma start ./test-config/karma.conf.js",
     "test-ci": "karma start ./test-config/karma.conf.js --single-run",
     "test-coverage": "karma start ./test-config/karma.conf.js --coverage",
-    "e2e": "npm run e2e-update && npm run e2e-test",
-    "e2e-test": "protractor ./test-config/protractor.conf.js",
+    "e2e": "npm run e2e-update && npm run e2e-tests",
+    "e2e-tests": "ionic-app-scripts build && protractor ./test-config/protractor.conf.js",
     "e2e-update": "webdriver-manager update --standalone false --gecko false"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "ionic-angular": "3.7.1",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
+    "jshint": "^2.9.5",
     "moment": "^2.19.1",
     "rxjs": "5.4.3",
     "sw-toolbox": "3.6.0",
@@ -46,11 +47,14 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.4.5",
+    "@angular/router": "^5.0.1",
     "@ionic/app-scripts": "3.0.0",
     "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "@types/jasmine": "^2.6.0",
     "@types/node": "^8.0.31",
     "angular2-template-loader": "^0.6.2",
+    "codacy-coverage": "^2.0.3",
+    "connect": "^3.6.5",
     "html-loader": "^0.5.1",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine": "^2.8.0",
@@ -63,7 +67,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.4",
     "null-loader": "^0.1.1",
-    "protractor": "^5.1.2",
+    "protractor": "^5.2.0",
+    "serve-static": "^1.13.1",
     "ts-loader": "^2.3.7",
     "ts-node": "^3.3.0",
     "typescript": "2.3.4"
