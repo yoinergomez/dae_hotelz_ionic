@@ -49,7 +49,7 @@
       <ion-col>
           <ion-item>
             <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
-            <ion-input placeholder="Nombre" type="text" formControlName="name" maxlength="50"
+            <ion-input id="name-id" placeholder="Nombre" type="text" formControlName="name" maxlength="50"
             onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
           </ion-item>
           <ion-item *ngIf="!formReserve.controls.name.valid  && (formReserve.controls.name.dirty || submitAttempt)">
@@ -73,7 +73,7 @@
     <ion-row>
       <ion-col>
         <ion-item>
-         <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
+         <ion-input id="document-id" placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
        </ion-item>
        <ion-item *ngIf="!formReserve.controls.doc_id.valid && (formReserve.controls.doc_id.dirty || submitAttempt)">
         <p><strong>Please enter a valid document.</strong> </p>
@@ -84,7 +84,7 @@
       <ion-col>
           <ion-item>
             <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
-            <ion-input placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
+            <ion-input id="email-id" placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
           </ion-item>
           <ion-item *ngIf="!formReserve.controls.email.valid && (formReserve.controls.email.dirty || submitAttempt)">
             <p>Please enter a valid email.</p>
@@ -95,7 +95,7 @@
       <ion-col>
           <ion-item>
             <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
-            <ion-input placeholder="Teléfono" type="text" formControlName="phone_number" maxlength="15"
+            <ion-input id="phone-id" placeholder="Teléfono" type="text" formControlName="phone_number" maxlength="15"
               onkeydown="return ( event.ctrlKey || event.altKey
               || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
               || (95<event.keyCode && event.keyCode<106)
@@ -110,7 +110,7 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 margin-top>
-        <button ion-button block color="light" [disabled]="!formReserve.valid">Reservar</button>
+        <button id="btn-reserve-id" ion-button block color="light" [disabled]="!formReserve.valid">Reservar</button>
       </ion-col>
     </ion-row>
   </form>

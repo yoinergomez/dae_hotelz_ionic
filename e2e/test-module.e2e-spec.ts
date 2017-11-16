@@ -2,7 +2,7 @@ import { browser, element, by} from 'protractor';
 import { protractor } from 'protractor/built/ptor';
 
 describe('Form search hotels', function(){
-  var searchButton, arrive_date, departure_date;
+  var searchButton, arrive_date, departure_date, reserveButton;
 
   beforeEach(function() {
       //browser.get('/');
@@ -31,10 +31,12 @@ describe('Form search hotels', function(){
         element(by.cssContainingText('.button', 'Done')).click();
         browser.driver.sleep(1000);
         element(by.id("buscar")).click();
-        browser.driver.sleep(2000);
+        browser.driver.sleep(5000);
         element(by.css(".thumbnail")).click();
         browser.driver.sleep(2000);
         element(by.id("reserve-id")).click();
         browser.driver.sleep(1000);
+        reserveButton = element(by.id("btn-reserve-id"));
+        expect(reserveButton.getAttribute('disabled')).toBe('true');
   });
 });
