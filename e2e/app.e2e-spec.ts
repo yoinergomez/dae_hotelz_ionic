@@ -10,7 +10,7 @@ describe('App', () => {
     browser.get('');
   });
 
-  describe('default screen', () => {
+  describe('default screen Hotelz', () => {
     beforeEach(() => {
       page.navigateTo('/');
     });
