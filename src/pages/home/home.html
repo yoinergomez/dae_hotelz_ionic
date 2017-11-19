@@ -20,7 +20,7 @@
           <ion-item>
             <ion-label>
               <ion-icon name="search"></ion-icon> Ciudad</ion-label>
-            <ion-select formControlName="city" interface="action-sheet" cancelText="Cancelar">
+            <ion-select id="city-id" formControlName="city" interface="action-sheet" cancelText="Cancelar">
               <ion-option value="05001">Medellín</ion-option>
               <ion-option value="11001">Bogotá</ion-option>
             </ion-select>
@@ -37,7 +37,7 @@
           <ion-item>
             <ion-label stacked>
               <ion-icon name="calendar"></ion-icon> Salida</ion-label>
-            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" [min]="min_leave_date" max="2020-10-31" formControlName="leave_date"></ion-datetime>
+            <ion-datetime placeholder="__ / __  / __" displayFormat="DD-MMM-YYYY" [min]="min_leave_date" max="2020-10-31" formControlName="leave_date" id="departure-id"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col>
@@ -45,7 +45,7 @@
             <ion-label>
               <ion-icon name="people"></ion-icon> Huéspedes</ion-label>
             <!-- <ion-icon name="people"></ion-icon> Número de huéspedes</ion-label> -->
-            <ion-select formControlName="hosts" interface="action-sheet" cancelText="Cancelar">
+            <ion-select id="host-id" formControlName="hosts" interface="action-sheet" cancelText="Cancelar">
               <ion-option value="1">1</ion-option>
               <ion-option value="2">2</ion-option>
               <ion-option value="3">3</ion-option>
@@ -58,16 +58,14 @@
           <ion-item>
             <ion-label>
               <ion-icon name="grid"></ion-icon> Habitación</ion-label>
-            <!-- <ion-icon name="grid"></ion-icon> Tipo de habitación</ion-label> -->
-            <ion-select formControlName="room_type" interface="action-sheet" cancelText="Cancelar">
+            <ion-select id="room_type-id" formControlName="room_type" interface="action-sheet" cancelText="Cancelar">
               <ion-option value="S">Sencilla</ion-option>
               <ion-option value="L">Lujosa</ion-option>
             </ion-select>
           </ion-item>
         </ion-col>
-        <ion-col col-12 margin-top>
-          <button ion-button block color="light" [disabled]="!formSearchRooms.valid">Buscar</button>
-          <!-- <button ion-button block color="light">Buscar</button> -->
+        <ion-col col-12 margin-top >
+          <button ion-button block color="light" [disabled]="!formSearchRooms.valid" id="buscar">Buscar</button>
         </ion-col>
       </ion-row>
     </form>

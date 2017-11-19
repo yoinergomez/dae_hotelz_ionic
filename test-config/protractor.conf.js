@@ -10,7 +10,10 @@ exports.config = {
     '../e2e/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'chromeOptions': {
+      args: ['--no-sandbox']
+    }
   },
   directConnect: true,
   baseUrl: 'http://localhost:8100/',
@@ -23,10 +26,11 @@ exports.config = {
   useAllAngular2AppRoots: true,
   beforeLaunch: function() {
     require('ts-node').register({
-      project: 'e2e'
+      project: 'e2e/tsconfig.e2e.json'
     });
+    require('connect')().use(require('serve-static')('www')).listen(8100);
   },
-  onPrepare: function() {
+  onPrepare() {
     jasmine.getEnv().addReporter(new SpecReporter());
   }
 };
