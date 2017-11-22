@@ -1,6 +1,6 @@
 var webpackConfig = require('./webpack.test.js');
 
-module.exports = function(config) {
+module.exports = function (config) {
   var _config = {
     basePath: '../',
 
