@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpModule } from '@angular/http';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListRoomsPage } from "../pages/list-rooms/list-rooms";
-import { HotelzProvider } from '../providers/hotelz/hotelz';
-import { ReservePage } from '../pages/reserve/reserve';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 import { DetailPage } from '../pages/detail/detail';
-import { TabsPage } from '../pages/tabs/tabs';
+import { HomePage } from '../pages/home/home';
+import { ListRoomsPage } from '../pages/list-rooms/list-rooms';
 import { MyProfilePage } from '../pages/my-profile/my-profile';
 import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
+import { ReservePage } from '../pages/reserve/reserve';
+import { TabsPage } from '../pages/tabs/tabs';
+import { HotelzProvider } from '../providers/hotelz/hotelz';
+import { MyApp } from './app.component';
+import { AppSettings } from './app.config';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(AppSettings.FIREBASE_CONFIG),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +52,9 @@ import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HotelzProvider,
-    HttpModule
+    HttpModule,
+    AngularFireAuth,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
