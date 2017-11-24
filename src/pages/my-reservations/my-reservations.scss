@@ -1,3 +1,50 @@
-page-my-reservations {
 
-}
+page-my-reservations {
+    ion-card,
+    ion-item {
+      border-radius: 3px !important;
+    }
+  
+    .small {
+      background-color: #1bcc56;
+    }
+  
+    span > strong {
+      color: #c1272d;
+    }
+  }
+  
+  .container {
+      text-align: center;
+      padding: 10px 0;
+  }
+  
+  .container img{
+      filter: brightness(0) invert(1);
+      border: 2px solid white;
+      padding: 5px;
+      background-color:transparent;
+  }
+  
+  .badge {
+    background-color: #1bcc56;
+  }
+  
+  .toolbar-title {
+       color: white;
+  }
+  
+  .toolbar img{
+      width: 30px;
+      filter: brightness(0) invert(1);
+      margin-left: 5px;
+  }
+  
+  ion-title{
+      display: inline-block;
+  }
+  
+  ion-header ion-icon.back-button-icon.icon {
+      color: white;
+  }
+  

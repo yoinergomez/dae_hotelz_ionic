@@ -1,0 +1,103 @@
+{
+    "reservations": [
+      {
+        "hotel_id": "5a1064fdab4b14d8c09f5300",
+        "hotel_name": "Sede Bogotá",
+        "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+        "hotel_location": {
+          "address": "556 Williams Avenue, Evergreen, Federated States Of Micronesia, 6771",
+          "lat": -41.475662,
+          "long": 121.884053
+        },
+        "check_in": "11:39",
+        "check_out": "09:01",
+        "hotel_website": "http://www.RODEOLOGY.com",
+        "reservation": [
+          {
+            "state": "A-C-D",
+            "reserve_id": "1234235",
+            "arrive_date": "2017-01-01",
+            "leave_date": "2017-02-02",
+            "room": {
+              "room_type": "L",
+              "capacity": 3,
+              "price": 53908,
+              "currency": "COP",
+              "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+              "description": "Officia consectetur deserunt laborum elit velit velit excepteur laboris pariatur labore labore nisi ipsum. Et esse eiusmod nulla ad elit et fugiat nostrud aute ut. Officia ullamco et Lorem pariatur laboris. Elit non id laboris aliquip proident reprehenderit veniam in cupidatat aute in sunt eu. Consectetur anim qui aliquip consequat. Consequat veniam ipsum Lorem consectetur ad enim pariatur magna magna excepteur fugiat officia exercitation veniam. Esse sit irure cillum sunt consequat ipsum dolor ex magna occaecat aute non occaecat culpa.\r\n",
+              "beds": {
+                "simple": 2,
+                "double": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "hotel_id": "5a1064fdab4b14d8c09f5300",
+        "hotel_name": "Sede Medellin",
+        "hotel_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+        "hotel_location": {
+          "address": "556 Williams Avenue, Evergreen, Federated States Of Micronesia, 6771",
+          "lat": -41.475662,
+          "long": 121.884053
+        },
+        "check_in": "11:39",
+        "check_out": "09:01",
+        "hotel_website": "http://www.RODEOLOGY.com",
+        "reservation": [
+          {
+            "state": "A-C-D",
+            "reserve_id": "1234235",
+            "arrive_date": "2017-01-01",
+            "leave_date": "2017-02-02",
+            "room": {
+              "room_type": "L",
+              "capacity": 3,
+              "price": 53909,
+              "currency": "COP",
+              "room_thumbnail": "http://www.hotelarielsoaxtepec.com/hotel3.jpg",
+              "description": "Officia consectetur deserunt laborum elit velit velit excepteur laboris pariatur labore labore nisi ipsum. Et esse eiusmod nulla ad elit et fugiat nostrud aute ut. Officia ullamco et Lorem pariatur laboris. Elit non id laboris aliquip proident reprehenderit veniam in cupidatat aute in sunt eu. Consectetur anim qui aliquip consequat. Consequat veniam ipsum Lorem consectetur ad enim pariatur magna magna excepteur fugiat officia exercitation veniam. Esse sit irure cillum sunt consequat ipsum dolor ex magna occaecat aute non occaecat culpa.\r\n",
+              "beds": {
+                "simple": 2,
+                "double": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "hotel_id": "5a1064fdab4b14d8c09f5300",
+        "hotel_name": "Sede Medellin",
+        "hotel_thumbnail": "https://s-ec.bstatic.com/images/hotel/max1024x768/409/40906282.jpg",
+        "hotel_location": {
+          "address": "556 Williams Avenue, Evergreen, Federated States Of Micronesia, 6771",
+          "lat": -41.475662,
+          "long": 121.884053
+        },
+        "check_in": "09:39",
+        "check_out": "10:21",
+        "hotel_website": "http://www.hotelsanfernandoplaza.com",
+        "reservation": [
+          {
+            "state": "A",
+            "reserve_id": "1030302",
+            "arrive_date": "2017-09-09",
+            "leave_date": "2017-09-12",
+            "room": {
+              "room_type": "L",
+              "capacity": 3,
+              "price": 173908,
+              "currency": "COP",
+              "room_thumbnail": "http://static.travelmkt.com/img/co/medellin/hotelsanfernandoplaza/hotelsanfernandoplaza_591.jpg",
+              "description": " Hotel ubicado en Medellín, Antioquia",
+              "beds": {
+                "simple": 1,
+                "double": 2
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }

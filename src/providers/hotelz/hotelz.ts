@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
-
 /*
   Generated class for the HotelzProvider provider.
 */
@@ -69,6 +68,23 @@ export class HotelzProvider {
           console.log(data);
           
           let response:any = data.json();     
+          resolve(response);
+        }, (error)=>{
+          let errorMessage:any = error.json(); 
+          reject(errorMessage);
+        }
+      );
+  });
+  }
+
+  getAllReservations(hotel_api_url:string){
+
+    return new Promise((resolve, reject)=>{
+      this.http.get("assets/response-show-reserves.json").subscribe(
+        (data) =>{
+          
+          let response:any = data.json();     
+          response.hotel_api_url = hotel_api_url;
           resolve(response);
         }, (error)=>{
           let errorMessage:any = error.json(); 
