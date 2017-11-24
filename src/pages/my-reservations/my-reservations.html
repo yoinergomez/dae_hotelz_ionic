@@ -31,7 +31,7 @@
         <ion-icon name="calendar" style="margin:5px"> Salida: {{r.reservation.leave_date}} </ion-icon>
         <ion-item>
           <ion-badge class="small">
-              {{r.room_type_str}}
+              {{r.state_str}}
           </ion-badge>
           <span item-end>
             <strong>$ {{r.reservation.room.price | number}}</strong>

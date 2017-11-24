@@ -54,13 +54,31 @@ export class MyReservationsPage {
       for(let reservation of reservations){
         resInfo.reservation = reservation;
         room = reservation.room
-
-        if(room.room_type=='l' || room.room_type=='L' ){
-          resInfo.room_type_str = 'Lujosa'
-        }else{
-          resInfo.room_type_str = 'Sencilla'
+        switch(room.room_type){
+          case "L":
+          case "l":
+            resInfo.room_type_str = 'Lujosa';
+            break;
+          case "S":
+          case "s":
+            resInfo.room_type_str = 'Sencilla';
+            break;
+        }
+        switch(resInfo.reservation.state){
+          case "A": 
+            resInfo.state_str = "Activa";
+            break;
+          case "C":
+            resInfo.state_str = "Cancelada";
+            break;
+          case "D":
+            resInfo.state_str = "Expirada";
+            break;
+          default:
+            resInfo.state_str = "Activa";
         }
       }
+
       this.myReservations.push(resInfo)
     }
     //this.ordenar()

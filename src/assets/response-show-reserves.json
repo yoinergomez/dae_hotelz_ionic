@@ -14,7 +14,7 @@
         "hotel_website": "http://www.RODEOLOGY.com",
         "reservation": [
           {
-            "state": "A-C-D",
+            "state": "A",
             "reserve_id": "1234235",
             "arrive_date": "2017-01-01",
             "leave_date": "2017-02-02",
@@ -47,7 +47,7 @@
         "hotel_website": "http://www.RODEOLOGY.com",
         "reservation": [
           {
-            "state": "A-C-D",
+            "state": "C",
             "reserve_id": "1234235",
             "arrive_date": "2017-01-01",
             "leave_date": "2017-02-02",
@@ -80,7 +80,7 @@
         "hotel_website": "http://www.hotelsanfernandoplaza.com",
         "reservation": [
           {
-            "state": "A",
+            "state": "D",
             "reserve_id": "1030302",
             "arrive_date": "2017-09-09",
             "leave_date": "2017-09-12",
