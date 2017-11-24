@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 /**
  * Generated class for the MyProfilePage page.
@@ -18,7 +19,7 @@ export class MyProfilePage {
 
   formReserve: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, private _authService: AuthServiceProvider) {
     this.formReserve = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+')]],
       doc_type: [null, [Validators.required]],
@@ -31,6 +32,20 @@ export class MyProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyProfilePage');
+  }
+
+  login() {
+    this._authService.loginWithGoogle().then((data) => {
+      // console.log(data);
+      // console.log(data.user.displayName);
+      // console.log(data.user.email);
+      console.log(data.credential.idToken); // Este es el que se envía en las peticiones
+
+      this.formReserve.patchValue({
+        'name': data.user.displayName,
+        'email': data.user.email
+      });
+    });
   }
 
 }
