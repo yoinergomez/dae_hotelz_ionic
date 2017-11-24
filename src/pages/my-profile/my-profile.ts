@@ -39,6 +39,7 @@ export class MyProfilePage {
       // console.log(data);
       // console.log(data.user.displayName);
       // console.log(data.user.email);
+      console.log(data.credential.idToken); // Este es el que se envía en las peticiones
 
       this.formReserve.patchValue({
         'name': data.user.displayName,
