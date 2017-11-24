@@ -19,7 +19,7 @@
             "arrive_date": "2017-01-01",
             "leave_date": "2017-02-02",
             "room": {
-              "room_type": "L",
+              "room_type": "S",
               "capacity": 3,
               "price": 53908,
               "currency": "COP",

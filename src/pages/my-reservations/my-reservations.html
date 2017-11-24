@@ -8,7 +8,7 @@
   <ion-navbar>
   <img src="./assets/img/ICONO_2.png"  />
   <ion-title>
-    My reserves
+    Mis reservas
   </ion-title>
   </ion-navbar>
 </ion-header>
@@ -27,8 +27,8 @@
       </ion-thumbnail>
       <ion-col>
         <h2 style="padding-top: 5px;">{{r.hotel_name}}</h2>
-        <ion-icon text-wrap name="pin" style="margin-top: 7px;"> {{r.hotel_location}}</ion-icon>
-        <!-- <ion-col><p>Distribución: </p></ion-col> -->
+        <ion-icon name="calendar" style="margin:5px"> Llegada:{{r.reservation.arrive_date}} </ion-icon>
+        <ion-icon name="calendar" style="margin:5px"> Salida: {{r.reservation.leave_date}} </ion-icon>
         <ion-item>
           <ion-badge class="small">
               {{r.room_type_str}}
