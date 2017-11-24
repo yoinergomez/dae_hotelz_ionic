@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { AlertController } from 'ionic-angular';
-
 import { HomePage } from '../home/home';
 
 /**
@@ -20,7 +19,6 @@ import { HomePage } from '../home/home';
 })
 
 export class ReservePage {
-
   room: any;
   person: any;
   formReserve: FormGroup;
@@ -37,10 +35,8 @@ export class ReservePage {
       doc_id: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(11)]],
       email: ['', [Validators.required, Validators.email, Validators.minLength(7), Validators.maxLength(50)]],
       phone_number: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(7), Validators.maxLength(15)]]
-  });
+    });
   }
-
-
 
   /**Method called from the reserve button. It builds the json and it is sent to provider */
   reserve(event) {
@@ -72,9 +68,8 @@ export class ReservePage {
         }]
       });
       alert.present();
-
     })
-    .catch((error)=>{
+.catch((error)=>{
       const alert = this.alertCtrl.create({
         title: 'Error en la reserva',
         subTitle: 'La reserva no se pudó completar',
@@ -87,8 +82,5 @@ export class ReservePage {
       });
       alert.present();
     })
-
-
   }
-
 }
