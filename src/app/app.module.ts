@@ -19,6 +19,8 @@ import { HotelzProvider } from '../providers/hotelz/hotelz';
 import { MyApp } from './app.component';
 import { AppSettings } from './app.config';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { LoginPage } from "../pages/login/login";
+import { LoginPageModule } from "../pages/login/login.module";
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     IonicStorageModule.forRoot(),
     HttpModule,
     AngularFireModule.initializeApp(AppSettings.FIREBASE_CONFIG),
+    LoginPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,6 +51,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
+    LoginPage,
     TabsPage
   ],
   providers: [
