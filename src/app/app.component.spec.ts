@@ -24,7 +24,7 @@ describe('MyApp Component', () => {
       providers: [
         { provide: StatusBar, useClass: StatusBarMock },
         { provide: SplashScreen, useClass: SplashScreenMock },
-        { provide: Platform, useClass: PlatformMock }
+        { provide: Platform, useClass: PlatformMock },
         { provide: AuthServiceProvider, useClass: PlatformMock }
       ]
     })
