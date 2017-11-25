@@ -3,6 +3,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,6 +19,8 @@ import { HotelzProvider } from '../providers/hotelz/hotelz';
 import { MyApp } from './app.component';
 import { AppSettings } from './app.config';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { LoginPage } from "../pages/login/login";
+import { LoginPageModule } from "../pages/login/login.module";
 
 @NgModule({
   declarations: [
@@ -34,8 +37,11 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     HttpModule,
     AngularFireModule.initializeApp(AppSettings.FIREBASE_CONFIG),
+    LoginPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,6 +53,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     MyProfilePage,
     MyReservationsPage,
     CancelReservationPage,
+    LoginPage,
     TabsPage
     
   ],
