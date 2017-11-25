@@ -61,4 +61,8 @@ export class CancelReservationPage {
       })
 
   }
+
+  isCanceled(state){
+    return !(state==="A")
+  }
 }

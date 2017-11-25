@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { DetailPage } from '../detail/detail';
-import { API_GO, API_NODE, API_SCALA_DEV, API_PYTHON, API_NODE_DEV} from '../../global'
+import { API_GO, API_NODE, API_SCALA_DEV, API_PYTHON, API_NODE_DEV, API_GO_DEV} from '../../global'
 import { HomePage } from '../home/home';
 
 @IonicPage()
@@ -18,7 +18,7 @@ export class ListRoomsPage {
   onlyRooms = []
   numberFails: number;
 
-  hotels_names = [API_NODE_DEV, API_PYTHON, API_GO, API_SCALA_DEV]
+  hotels_names = [API_NODE_DEV, API_PYTHON, API_GO_DEV, API_SCALA_DEV]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider, private  alertCtrl: AlertController) {
@@ -29,7 +29,6 @@ export class ListRoomsPage {
   getRooms() {
     new Promise((resolve, reject)=>{
       for (let hotel_name of this.hotels_names) {
-        console.log(hotel_name);
 
         this._hotelzProvider.getAvalaibleRooms(hotel_name, this.info).then((response) => {
           this.hotels_response.push(response)

@@ -31,12 +31,12 @@
             <ion-col col-6>
               <label>Check in</label>
               <br/>
-              <span>{{reservation.room.check_in}}</span>
+              <span>{{reservation.hotel_info.check_in}}</span>
             </ion-col>
             <ion-col col-6>
               <label>Check out</label>
               <br/>
-              <span>{{reservation.room.check_out}}</span>
+              <span>{{reservation.hotel_info.check_out}}</span>
             </ion-col>
           </ion-row>
           <hr>
@@ -76,7 +76,7 @@
         <ion-col col-12>
           <p>{{reservation.room.description}}</p>
         </ion-col>
-        <button ion-button block class="badge" (click)="cancel()" id="cancel-id">Cancelar</button>
+        <button ion-button block class="badge" (click)="cancel()" [disabled]="isCanceled(reservation.state)" id="cancel-id">Cancelar</button>
       </ion-row>
     </div>
   </ion-content>

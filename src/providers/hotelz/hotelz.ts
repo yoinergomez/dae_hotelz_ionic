@@ -22,6 +22,8 @@ export class HotelzProvider {
     return new Promise((resolve, reject) => {
       /*let url = "https://udeain.herokuapp.com/api/v1/rooms?arrive_date=01-01-2017&leave_date=02-02-2017&city=05001&hosts=3&room_type=l"*/
       let url = hotel_name + "/rooms?" + "arrive_date=" + info.arrive_date + "&leave_date=" + info.leave_date + "&city=" + info.city + "&hosts=" + info.hosts + "&room_type=" + info.room_type;
+      console.log(url);
+      
       this.http.get(url).subscribe(
         (data) => {
           let response: any = data.json();
