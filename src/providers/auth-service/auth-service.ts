@@ -27,7 +27,7 @@ export class AuthServiceProvider {
       });
 
       this.afAuth.auth.signInWithPopup(provider).then(data => {
-        console.log(data.user.h.b);
+        console.log(data.user.h.b); // Token para validar en el servidor
         this.saveUserInformation(data.user).then(confirm => {
           resolve(confirm);
         });
