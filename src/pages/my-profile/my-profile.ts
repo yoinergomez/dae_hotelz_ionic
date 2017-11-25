@@ -26,7 +26,7 @@ export class MyProfilePage {
   ) {
     this.formReserve = this.formBuilder.group({
       name: [
-        "",
+        {value:"", disabled:true},
         [
           Validators.required,
           Validators.minLength(7),
@@ -40,7 +40,7 @@ export class MyProfilePage {
         [Validators.required, Validators.minLength(7), Validators.maxLength(11)]
       ],
       email: [
-        "",
+        {value:"", disabled:true},
         [
           Validators.required,
           Validators.email,
@@ -70,7 +70,7 @@ export class MyProfilePage {
       console.log(status);
       this._authService.getUserInformation().then(session => {
         console.log('session');
-        console.log(session.email);
+        console.log(session);
       });
     });
   }
