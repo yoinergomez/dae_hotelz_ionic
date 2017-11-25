@@ -23,7 +23,7 @@
 
     <ion-row (click)="showDetail(r)">
       <ion-thumbnail col-4 class="thumbnail">
-        <img [src]="r.reservation.room.room_thumbnail">
+        <img [src]="r.hotel_thumbnail">
       </ion-thumbnail>
       <ion-col>
         <h2 style="padding-top: 5px;">{{r.hotel_name}}</h2>
@@ -33,9 +33,11 @@
           <ion-badge class="small">
               {{r.state_str}}
           </ion-badge>
+          <!--
           <span item-end>
             <strong>$ {{r.reservation.room.price | number}}</strong>
           </span>
+          !-->
         </ion-item>
       </ion-col>
     </ion-row>
