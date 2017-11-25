@@ -20,40 +20,42 @@ export class AuthServiceProvider {
   ) {}
 
   loginWithGoogle() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    provider.setCustomParameters({
-      hd: "udea.edu.co"
+    let promise = new Promise((resolve, reject) => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      provider.setCustomParameters({
+        hd: "udea.edu.co"
+      });
+
+      this.afAuth.auth.signInWithPopup(provider).then(data => {
+        console.log(data.user.h.b);
+        this.saveUserInformation(data.user).then(confirm => {
+          resolve(confirm);
+        });
+        /* this.formReserve.patchValue({
+          'name': data.user.displayName,
+          'email': data.user.email
+        }); */
+      });
     });
-    //return this.afAuth.auth.signInWithPopup(provider);
-    this.afAuth.auth.signInWithPopup(provider).then(data => {
-      // console.log(data);
-      // console.log(data.user.displayName);
-      // console.log(data.user.email);
-      console.log(data.credential.idToken); // Este es el que se envía en las peticiones
-      this.saveUserInformation(data);
-      /* this.formReserve.patchValue({
-        'name': data.user.displayName,
-        'email': data.user.email
-      }); */
-    });
+    return promise;
   }
 
   logout() {
     return this.afAuth.auth.signOut();
   }
 
-  saveUserInformation(data: any) {
+  private saveUserInformation(data: any) {
     let promise = new Promise((resolve, reject) => {
       if (this.platform.is("cordova")) {
-        this.storage.set("token", data.credential.idToken);
+        this.storage.set("session", JSON.stringify(data));
         resolve(true);
       } else {
         // Desktop
-        if (data.credential.idToken) {
-          localStorage.setItem("token", data.credential.idToken);
+        if (data) {
+          localStorage.setItem("session", JSON.stringify(data));
           resolve(true);
         } else {
-          localStorage.removeItem("token");
+          localStorage.removeItem("session");
           resolve(false);
         }
       }
@@ -66,14 +68,13 @@ export class AuthServiceProvider {
     let promise = new Promise((resolve, reject) => {
       if (this.platform.is("cordova")) {
         this.storage.ready().then(() => {
-          this.storage.get("token").then(token => {
-            resolve(token);
+          this.storage.get("session").then(userInformation => {
+            resolve(userInformation);
           });
         });
       } else {
         // Desktop
-        localStorage.get("token");
-        resolve();
+        resolve(localStorage.getItem("session"));
       }
       resolve(null);
     });
