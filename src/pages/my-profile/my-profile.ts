@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 
@@ -16,22 +16,22 @@ import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
   templateUrl: "my-profile.html"
 })
 export class MyProfilePage {
-  formReserve: FormGroup;
+  formUser: FormGroup;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
-    private _authService: AuthServiceProvider
+    private _authService: AuthServiceProvider,
+    private alertCtrl: AlertController
   ) {
-    this.formReserve = this.formBuilder.group({
+    this.formUser = this.formBuilder.group({
       name: [
-        {value:"", disabled:true},
+        "",
         [
           Validators.required,
           Validators.minLength(7),
-          Validators.maxLength(50),
-          Validators.pattern("[a-zA-Z ]+")
+          Validators.maxLength(50)
         ]
       ],
       doc_type: [null, [Validators.required]],
@@ -40,7 +40,7 @@ export class MyProfilePage {
         [Validators.required, Validators.minLength(7), Validators.maxLength(11)]
       ],
       email: [
-        {value:"", disabled:true},
+        "",
         [
           Validators.required,
           Validators.email,
@@ -61,17 +61,26 @@ export class MyProfilePage {
   }
 
   ionViewDidLoad() {
-    console.log("ionViewDidLoad MyProfilePage");
+    this._authService.getUserInformation().then((user: any) => {
+      this.formUser.patchValue({
+        name: user.name,
+        email: user.email,
+        phone_number: user.phone_number,
+        doc_type: user.doc_type,
+        doc_id: user.doc_id
+      });
+    });
   }
 
-  login() {
-    this._authService.loginWithGoogle().then(status => {
-      console.log('status?');
-      console.log(status);
-      this._authService.getUserInformation().then(session => {
-        console.log('session');
-        console.log(session);
-      });
+  updateUser() {
+    this._authService.saveUserInformation(this.formUser.value).then(confirm => {
+      if (confirm === true) {
+        this.alertCtrl.create({
+          title: 'Información actualizada',
+          message: 'Su información ha sido guardada exitosamente',
+          buttons:['Ok!']
+        }).present();
+      }
     });
   }
 }

@@ -23,7 +23,7 @@ export class LoginPage implements AfterViewInit {
   ) {
     this.formReserve = this.formBuilder.group({
       name: [
-        {value:"", disabled:true},
+        {value:""},
         [Validators.required, Validators.minLength(7), Validators.maxLength(50)]
       ],
       doc_type: [null, [Validators.required]],
@@ -32,7 +32,7 @@ export class LoginPage implements AfterViewInit {
         [Validators.required, Validators.minLength(7), Validators.maxLength(11)]
       ],
       email: [
-        {value:"", disabled:true},
+        {value:""},
         [
           Validators.required,
           Validators.email,

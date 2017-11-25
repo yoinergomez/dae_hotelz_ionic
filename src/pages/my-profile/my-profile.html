@@ -20,14 +20,14 @@
     <img src="./assets/img/HOTELZ_NEGRO.png" width="200px" />
   </div>
 
-  <form novalidate [formGroup]="formReserve" (ngSubmit)="reserve()">
+  <form novalidate [formGroup]="formUser" (ngSubmit)="updateUser()">
     <ion-row>
       <ion-col>
         <ion-item>
           <ion-label>
             <ion-icon name="ios-contact"></ion-icon>
           </ion-label>
-          <ion-input placeholder="Nombre" type="text" formControlName="name" maxlength="50" onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
+          <ion-input placeholder="Nombre" type="text" formControlName="name" disabled maxlength="50" onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -58,7 +58,7 @@
           <ion-label>
             <ion-icon name="ios-at"></ion-icon>
           </ion-label>
-          <ion-input placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
+          <ion-input placeholder="Correo electronico" type="email" formControlName="email" disabled maxlength="50"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -79,7 +79,7 @@
     </ion-row>
     <ion-row>
       <ion-col col-12 margin-top>
-        <button ion-button block color="light" [disabled]="!formReserve.valid">Actualizar datos</button>
+        <button ion-button block color="light" [disabled]="!formUser.valid">Actualizar datos</button>
       </ion-col>
     </ion-row>
   </form>
