@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
+import { API_SCALA_DEV } from '../../global'
 
 /**
  * Generated class for the MyReservationsPage page.
@@ -18,21 +19,30 @@ export class MyReservationsPage {
 
   hotels_response: any = [];
   myReservations:any =[];
+  hotels_names = [ API_SCALA_DEV]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  private _hotelzProvider: HotelzProvider) {
+    
+  }
+
+  ionViewDidEnter() {
     this.getReservations();
   }
 
+
   getReservations(){
-    let hotel_name="prueba";
-    this._hotelzProvider.getAllReservations(hotel_name).then((response) => {
-      
-      this.hotels_response.push(response);
-      this.createListReservations(response);
-    })
-    .catch((error)=>{
     
-    })
+    for (let hotel_name of this.hotels_names) {
+      this._hotelzProvider.getAllReservations(hotel_name).then((response) => {
+        
+        this.hotels_response.push(response);
+        this.createListReservations(response);
+      })
+      .catch((error)=>{
+      
+      })
+    }
+    
   }
 
   createListReservations(hotel_response:any){
@@ -77,9 +87,10 @@ export class MyReservationsPage {
           default:
             resInfo.state_str = "Activa";
         }
+        this.myReservations.push(resInfo)
       }
 
-      this.myReservations.push(resInfo)
+      
     }
     //this.ordenar()
 

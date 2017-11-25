@@ -58,7 +58,7 @@ export class ReservePage {
         "phone_number":this.formReserve.value.phone_number
       }
     };
-    let hotel_url = this.room.hotel_url +'/reserve'
+    let hotel_url = this.room.hotel_url 
     this._hotelzProvider.doReserve(hotel_url,reserveInfo).then((response) => {
       this.responseSuccess= response;
       const alert = this.alertCtrl.create({
