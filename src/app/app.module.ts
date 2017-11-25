@@ -13,6 +13,7 @@ import { DetailPage } from '../pages/detail/detail';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MyProfilePage } from '../pages/my-profile/my-profile';
 import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
+import { LoginPage } from "../pages/login/login";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
+    LoginPage,
     TabsPage
   ],
   imports: [
@@ -39,6 +41,7 @@ import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
+    LoginPage,
     TabsPage
   ],
   providers: [
