@@ -16,6 +16,7 @@ export class ListRoomsPage {
   info: any;
   hotels_response: any = []
   onlyRooms = []
+  numberFails: number;
 
   hotels_names = [API_NODE_DEV, API_PYTHON, API_GO, API_SCALA_DEV]
 
@@ -35,9 +36,15 @@ export class ListRoomsPage {
           this.createListRooms(response)
         })
         .catch((error)=>{
-          const alert = this.alertCtrl.create({
+          this.numberFails = this.numberFails +1;
+        
+        })
+        
+      }
+      if(this.numberFails == this.hotels_names.length){
+        const alert = this.alertCtrl.create({
           title: 'Error de búsqueda',
-          subTitle: 'La fecha de ingreso debe ser menor que la de salida',
+          subTitle: 'Vuelva a intentarlo más tarde',
           buttons: [{
             text:'Ok',
             handler: () => {
@@ -46,10 +53,8 @@ export class ListRoomsPage {
           }]
         });
         alert.present();
-        
-        })
-        
       }
+      
     });
   }
 
