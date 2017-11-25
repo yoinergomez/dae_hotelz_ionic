@@ -23,12 +23,12 @@
 
     <ion-row (click)="showDetail(r)">
       <ion-thumbnail col-4 class="thumbnail">
-        <img [src]="r.hotel_thumbnail">
+        <img [src]="r.hotel_info.hotel_thumbnail">
       </ion-thumbnail>
       <ion-col>
-        <h2 style="padding-top: 5px;">{{r.hotel_name}}</h2>
-        <ion-icon name="calendar" style="margin:5px"> Llegada:{{r.reservation.arrive_date}} </ion-icon>
-        <ion-icon name="calendar" style="margin:5px"> Salida: {{r.reservation.leave_date}} </ion-icon>
+        <h2 style="padding-top: 5px;">{{r.hotel_info.hotel_name}}</h2>
+        <ion-icon name="calendar" style="margin:5px"> Llegada:{{r.arrive_date}} </ion-icon>
+        <ion-icon name="calendar" style="margin:5px"> Salida: {{r.leave_date}} </ion-icon>
         <ion-item>
           <ion-badge class="small">
               {{r.state_str}}

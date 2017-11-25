@@ -26,7 +26,7 @@ export class MyReservationsPage {
   }
 
   ionViewDidEnter() {
-    this.myReservations = [];
+    this.myReservations.length = 0;
     this.getReservations();
   }
 
@@ -35,9 +35,7 @@ export class MyReservationsPage {
     
     for (let hotel_name of this.hotels_names) {
       this._hotelzProvider.getAllReservations(hotel_name).then((response) => {
-        console.log(response);
         
-        this.hotels_response.push(response);
         this.createListReservations(response);
       })
       .catch((error)=>{
@@ -59,12 +57,11 @@ export class MyReservationsPage {
       hotelInfo.check_out = hotelReservation.check_out
       hotelInfo.hotel_thumbnail = hotelReservation.hotel_thumbnail
       let reservations = hotelReservation.reservation
-      console.log(reservations);
 
       for(let reservation of reservations){
         let resInfo: any = {};
-        resInfo = hotelInfo;
-        resInfo.reservation = reservation;
+        reservation.hotel_info = hotelInfo;
+        
         //console.log("Hola pase por aqui");
         /*let room = resInfo.reservation.room;
         /*switch(room.room_type){
@@ -93,11 +90,9 @@ export class MyReservationsPage {
         }*/
         //resInfo.state_str = "Activa"
         
+        //console.log(resInfo.hotel_name, resInfo.hotel_location);
         
-        //console.log(resInfo);
-        console.log(resInfo.hotel_name, resInfo.hotel_location);
-        
-        this.myReservations.push(resInfo)
+        this.myReservations.push(reservation)
       }
 
       
