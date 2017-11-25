@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { CancelReservationPage } from '../pages/cancel-reservation/cancel-reservation';
 import { DetailPage } from '../pages/detail/detail';
 import { HomePage } from '../pages/home/home';
 import { ListRoomsPage } from '../pages/list-rooms/list-rooms';
@@ -28,6 +28,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
+    CancelReservationPage,
     TabsPage
   ],
   imports: [
@@ -45,7 +46,9 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
+    CancelReservationPage,
     TabsPage
+    
   ],
   providers: [
     StatusBar,

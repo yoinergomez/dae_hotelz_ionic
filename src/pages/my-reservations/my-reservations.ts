@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { API_SCALA_DEV, API_NODE_DEV } from '../../global'
+import { CancelReservationPage } from '../cancel-reservation/cancel-reservation';
 
 /**
  * Generated class for the MyReservationsPage page.
@@ -18,11 +19,11 @@ import { API_SCALA_DEV, API_NODE_DEV } from '../../global'
 export class MyReservationsPage {
 
   hotels_response: any = [];
-  myReservations:any =[];
+  myReservations: any = [];
   hotels_names = [API_SCALA_DEV, API_NODE_DEV]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private _hotelzProvider: HotelzProvider) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _hotelzProvider: HotelzProvider) {
+
   }
 
   ionViewDidEnter() {
@@ -31,78 +32,73 @@ export class MyReservationsPage {
   }
 
 
-  getReservations(){
-    
+  getReservations() {
+
     for (let hotel_name of this.hotels_names) {
       this._hotelzProvider.getAllReservations(hotel_name).then((response) => {
-        
+
         this.createListReservations(response);
       })
-      .catch((error)=>{
-      
-      })
+        .catch((error) => {
+
+        })
     }
   }
 
-  createListReservations(hotel_response:any){
-    let hotel = hotel_response 
-    let hotelReservations : any = []
+  createListReservations(hotel_response: any) {
+    let hotel = hotel_response
+    let hotelReservations: any = []
     hotelReservations = hotel_response.reservations
-    for(let hotelReservation of hotelReservations){
-      let hotelInfo:any = {};
+    for (let hotelReservation of hotelReservations) {
+      let hotelInfo: any = {};
       hotelInfo.hotel_name = hotelReservation.hotel_name
-      hotelInfo.hotel_location= hotelReservation.hotel_location.address
+      hotelInfo.hotel_location = hotelReservation.hotel_location.address
       hotelInfo.hotel_api_url = hotel_response.hotel_api_url
       hotelInfo.check_in = hotelReservation.check_in
       hotelInfo.check_out = hotelReservation.check_out
       hotelInfo.hotel_thumbnail = hotelReservation.hotel_thumbnail
       let reservations = hotelReservation.reservation
 
-      for(let reservation of reservations){
+      for (let reservation of reservations) {
         let resInfo: any = {};
         reservation.hotel_info = hotelInfo;
-        
-        //console.log("Hola pase por aqui");
-        /*let room = resInfo.reservation.room;
-        /*switch(room.room_type){
+
+        let room = reservation.room;
+        switch (room.room_type) {
           case "L":
           case "l":
-            resInfo.room_type_str = 'Lujosa';
+            reservation.room_type_str = 'Lujosa';
             break;
           case "S":
           case "s":
-            resInfo.room_type_str = 'Sencilla';
+            reservation.room_type_str = 'Sencilla';
             break;
         }
-        console.log("Hola pase por aqui");
-        switch(resInfo.reservation.state){
-          case "A": 
-            resInfo.state_str = "Activa";
+        switch (reservation.state) {
+          case "A":
+            reservation.state_str = "Activa";
             break;
           case "C":
-            resInfo.state_str = "Cancelada";
+            reservation.state_str = "Cancelada";
             break;
           case "D":
-            resInfo.state_str = "Expirada";
+            reservation.state_str = "Expirada";
             break;
           default:
-            resInfo.state_str = "Activa";
-        }*/
-        //resInfo.state_str = "Activa"
-        
-        //console.log(resInfo.hotel_name, resInfo.hotel_location);
-        
+            reservation.state_str = "Activa";
+        }
+
         this.myReservations.push(reservation)
       }
 
-      
+
     }
     //this.ordenar()
 
   }
 
-  showDetail(reservation){
-    
+  showDetail(reservation) {
+    this.navCtrl.push(CancelReservationPage, {"reservation": reservation});
   }
 
 
