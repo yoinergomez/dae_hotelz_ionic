@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { DetailPage } from '../detail/detail';
 import { API_GO, API_NODE, API_SCALA, API_PYTHON } from '../../global'
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -18,7 +20,7 @@ export class ListRoomsPage {
   hotels_names = [API_NODE, API_PYTHON, API_GO, API_SCALA]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private _hotelzProvider: HotelzProvider) {
+              private _hotelzProvider: HotelzProvider, private  alertCtrl: AlertController) {
     this.info = this.navParams.get("info")
     this.getRooms()
   }
@@ -32,12 +34,27 @@ export class ListRoomsPage {
           this.hotels_response.push(response)
           this.createListRooms(response)
         })
+        .catch((error)=>{
+          const alert = this.alertCtrl.create({
+          title: 'Error de búsqueda',
+          subTitle: 'La fecha de ingreso debe ser menor que la de salida',
+          buttons: [{
+            text:'Ok',
+            handler: () => {
+              this.navCtrl.push(HomePage)
+            }
+          }]
+        });
+        alert.present();
+        
+        })
+        break;
       }
     });
   }
 
   createListRooms(hotel_response:any){
-      let hotel = hotel_response
+      let hotel = hotel_response      
       for(let room of hotel.rooms){
         room.hotel_id = hotel.hotel_id
         room.hotel_name = hotel.hotel_name
