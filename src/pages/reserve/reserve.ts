@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
+import { AuthServiceProvider } from "../../providers/auth-service/auth-service";
 import { AlertController } from 'ionic-angular';
+
 
 import { HomePage } from '../home/home';
 
@@ -29,10 +31,10 @@ export class ReservePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private formBuilder: FormBuilder,private _hotelzProvider: HotelzProvider,
-    private  alertCtrl: AlertController) {
+    private _authService: AuthServiceProvider, private alertCtrl: AlertController) {
     this.room = this.navParams.get('room');
     this.formReserve = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50), Validators.pattern('[a-zA-Z ]+')]],
+      name: ['', [Validators.required, Validators.minLength(7) ,Validators.maxLength(50)]],
       doc_type: [null, [Validators.required]],
       doc_id: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(11)]],
       email: ['', [Validators.required, Validators.email, Validators.minLength(7), Validators.maxLength(50)]],
@@ -89,6 +91,30 @@ export class ReservePage {
     })
 
 
+  }
+
+  ionViewDidLoad() {
+    this._authService.getUserInformation().then((user: any) => {
+      this.formReserve.patchValue({
+        name: user.name,
+        email: user.email,
+        phone_number: user.phone_number,
+        doc_type: user.doc_type,
+        doc_id: user.doc_id
+      });
+    });
+  }
+
+  updateUser() {
+    this._authService.saveUserInformation(this.formReserve.value).then(confirm => {
+      if (confirm === true) {
+        this.alertCtrl.create({
+          title: 'Información actualizada',
+          message: 'Su información ha sido guardada exitosamente',
+          buttons:['Ok!']
+        }).present();
+      }
+    });
   }
 
 }
