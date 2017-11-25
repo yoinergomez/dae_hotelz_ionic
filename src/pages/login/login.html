@@ -25,17 +25,71 @@
 
       <!-- Ultimo Slide -->
       <ion-slide>
+
         <ion-toolbar>
         </ion-toolbar>
+        <br/>
 
-        <img src="assets/img/check.jpg" class="slide-image"/>
-        <h2 class="slide-title">¿Listo para empezar?</h2>
+        <img src="assets/img/ICONO_2.png" class="slide-logo"/>
 
-        <button ion-button large clear icon-right color="primary"
-                (click)="ingresar()">
-          Continuar
-          <ion-icon name="arrow-forward"></ion-icon>
-        </button>
+
+        <form novalidate [formGroup]="formReserve" (ngSubmit)="ingresar()">
+          <ion-row>
+            <ion-col>
+                <ion-item>
+                  <ion-label><ion-icon name="ios-contact"></ion-icon></ion-label>
+                  <ion-input placeholder="Nombre" type="text" formControlName="name" maxlength="50"
+                  onkeydown="return ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode == 8 || event.keyCode == 32);"></ion-input>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+
+            <ion-col>
+              <ion-item>
+              <ion-label><ion-icon name="ios-card"></ion-icon></ion-label>
+              <ion-select formControlName="doc_type" interface="action-sheet" cancelText="Cancelar">
+                  <ion-option value="cc" >Cedula</ion-option>
+                  <ion-option value="ti">Tarjeta de Identidad</ion-option>
+              </ion-select>
+            </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+               <ion-input placeholder="Documento" type="text" formControlName="doc_id"  maxlength="11"></ion-input>
+             </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+                <ion-item>
+                  <ion-label><ion-icon name="ios-at"></ion-icon></ion-label>
+                  <ion-input placeholder="Correo electronico" type="email" formControlName="email" maxlength="50"></ion-input>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+                <ion-item>
+                  <ion-label><ion-icon name="phone-portrait"></ion-icon></ion-label>
+                  <ion-input placeholder="Teléfono" type="text" formControlName="phone_number" maxlength="15"
+                    onkeydown="return ( event.ctrlKey || event.altKey
+                    || (47<event.keyCode && event.keyCode<58 && event.shiftKey==false)
+                    || (95<event.keyCode && event.keyCode<106)
+                    || (event.keyCode==8) || (event.keyCode==9)
+                    || (event.keyCode>34 && event.keyCode<40)
+                    || (event.keyCode==46) )"></ion-input>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12 margin-top>
+              <button ion-button block [disabled]="!formReserve.valid">Registrar</button>
+            </ion-col>
+          </ion-row>
+        </form>
 
       </ion-slide>
       <!-- Fin del último slide -->
