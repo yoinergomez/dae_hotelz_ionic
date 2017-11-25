@@ -28,13 +28,9 @@ export class AuthServiceProvider {
 
       this.afAuth.auth.signInWithPopup(provider).then(data => {
         console.log(data.user.h.b); // Token para validar en el servidor
-        this.saveUserInformation(data.user).then(confirm => {
+        this.saveSession(data.user).then(confirm => {
           resolve(confirm);
         });
-        /* this.formReserve.patchValue({
-          'name': data.user.displayName,
-          'email': data.user.email
-        }); */
       });
     });
     return promise;
@@ -44,7 +40,7 @@ export class AuthServiceProvider {
     return this.afAuth.auth.signOut();
   }
 
-  private saveUserInformation(data: any) {
+  private saveSession(data: any) {
     let promise = new Promise((resolve, reject) => {
       if (this.platform.is("cordova")) {
         this.storage.set("session", JSON.stringify(data));
@@ -64,7 +60,44 @@ export class AuthServiceProvider {
     return promise;
   }
 
+  saveUserInformation(data: any) {
+    let promise = new Promise((resolve, reject) => {
+      if (this.platform.is("cordova")) {
+        this.storage.set("user", JSON.stringify(data));
+        resolve(true);
+      } else {
+        // Desktop
+        if (data) {
+          localStorage.setItem("user", JSON.stringify(data));
+          resolve(true);
+        } else {
+          localStorage.removeItem("user");
+          resolve(false);
+        }
+      }
+      resolve(null);
+    });
+    return promise;
+  }
+
   getUserInformation() {
+    let promise = new Promise((resolve, reject) => {
+      if (this.platform.is("cordova")) {
+        this.storage.ready().then(() => {
+          this.storage.get("user").then(userInformation => {
+            resolve(userInformation);
+          });
+        });
+      } else {
+        // Desktop
+        resolve(JSON.parse(localStorage.getItem("user")));
+      }
+      resolve(null);
+    });
+    return promise;
+  }
+
+  getCurrentSession() {
     let promise = new Promise((resolve, reject) => {
       if (this.platform.is("cordova")) {
         this.storage.ready().then(() => {
