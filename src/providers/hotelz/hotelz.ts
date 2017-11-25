@@ -2,18 +2,25 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AuthServiceProvider } from '../auth-service/auth-service';
+
 /*
   Generated class for the HotelzProvider provider.
 */
 @Injectable()
 export class HotelzProvider {
 
-  /*Endpoints
-    https://udeain.herokuapp.com/api/v1
-      - /rooms/arrive_date/01-01-2017/leave_date/02-02-2017/city/05001/hosts/3/room_type/l
-  */
+  token: string
 
-  constructor(public http: Http) { }
+  constructor(public http: Http, private _authService: AuthServiceProvider) {
+    this.getToken();
+   }
+
+   getToken(){
+    this._authService.getCurrentSession().then((session: any) => {
+     this.token = session.stsTokenManager.accessToken;
+    });
+   }
 
   /**
    * Get the availables rooms from a petition http
@@ -58,7 +65,7 @@ export class HotelzProvider {
     let url = hotel_api_url + "/rooms/reserve"
     console.log(url);
 
-    let token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3NjA3YWVhMDdlOTQzNzA1MTdhNjEyNmExODRkMTI3MmE2OTY1OTEifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29ob3RlbHMtNWE1ODkiLCJuYW1lIjoiSkhPTkFUQU4gQUxFWMOBTkRFUiBPUk9aQ08gQkxBTkTDk04iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDQuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1IMUtVQjl6SGs2SS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFDTS9TZHRKTmlYSkhnNC9waG90by5qcGciLCJhdWQiOiJnb2hvdGVscy01YTU4OSIsImF1dGhfdGltZSI6MTUxMTYwMjMxMCwidXNlcl9pZCI6IlV3VUhIQlNmRmRiaXdWQ08wSWU5eVFmdXpkSTMiLCJzdWIiOiJVd1VISEJTZkZkYml3VkNPMEllOXlRZnV6ZEkzIiwiaWF0IjoxNTExNjAyMzEwLCJleHAiOjE1MTE2MDU5MTAsImVtYWlsIjoiamhvbmF0YW5hLm9yb3pjb0B1ZGVhLmVkdS5jbyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTEzMzIxMjQ1NjE2NzI1OTA3NjY3Il0sImVtYWlsIjpbImpob25hdGFuYS5vcm96Y29AdWRlYS5lZHUuY28iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.jx94xqItoNWQegJGlt9RLUnDjOia_LAM1intGiWc_bvj89VENTrpOMK5_bLNuiT0SN4HMSErfWndc1ei45V1AAv_qsU-NTDOC4_6ZVMSUOgVqHbZ0wLjYmJiMO8nG4d-NGQPD9uBpbgzn5EUok8Cowsyanu6WrvomCwLKoucUVTWQxDuTsPlf8viVjrHm4hB5WMdixxZ4B0B8ol-hm_28ESP-sSqFc9QSoyEGvsc6pDwqbGRrMNbpJnEFErniY_VgCoFA22-eTbAXHPUbIiF2XCBZ1xJwiBpXvSp69HCfU9W63pcpYudDTwzX9R7UsaMQnZLmQHVj6gNN8PuC1DF3w";
+    let token = this.token;
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', token);
@@ -78,7 +85,7 @@ export class HotelzProvider {
 
   getAllReservations(hotel_api_url: string) {
     let url = hotel_api_url + "/reservations"
-    let token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3NjA3YWVhMDdlOTQzNzA1MTdhNjEyNmExODRkMTI3MmE2OTY1OTEifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29ob3RlbHMtNWE1ODkiLCJuYW1lIjoiSkhPTkFUQU4gQUxFWMOBTkRFUiBPUk9aQ08gQkxBTkTDk04iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDQuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1IMUtVQjl6SGs2SS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFDTS9TZHRKTmlYSkhnNC9waG90by5qcGciLCJhdWQiOiJnb2hvdGVscy01YTU4OSIsImF1dGhfdGltZSI6MTUxMTYwMjMxMCwidXNlcl9pZCI6IlV3VUhIQlNmRmRiaXdWQ08wSWU5eVFmdXpkSTMiLCJzdWIiOiJVd1VISEJTZkZkYml3VkNPMEllOXlRZnV6ZEkzIiwiaWF0IjoxNTExNjAyMzEwLCJleHAiOjE1MTE2MDU5MTAsImVtYWlsIjoiamhvbmF0YW5hLm9yb3pjb0B1ZGVhLmVkdS5jbyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTEzMzIxMjQ1NjE2NzI1OTA3NjY3Il0sImVtYWlsIjpbImpob25hdGFuYS5vcm96Y29AdWRlYS5lZHUuY28iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.jx94xqItoNWQegJGlt9RLUnDjOia_LAM1intGiWc_bvj89VENTrpOMK5_bLNuiT0SN4HMSErfWndc1ei45V1AAv_qsU-NTDOC4_6ZVMSUOgVqHbZ0wLjYmJiMO8nG4d-NGQPD9uBpbgzn5EUok8Cowsyanu6WrvomCwLKoucUVTWQxDuTsPlf8viVjrHm4hB5WMdixxZ4B0B8ol-hm_28ESP-sSqFc9QSoyEGvsc6pDwqbGRrMNbpJnEFErniY_VgCoFA22-eTbAXHPUbIiF2XCBZ1xJwiBpXvSp69HCfU9W63pcpYudDTwzX9R7UsaMQnZLmQHVj6gNN8PuC1DF3w";
+    let token = this.token;
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     headers.append('Accept', 'application/json');
@@ -101,7 +108,7 @@ export class HotelzProvider {
 
   cancelReservation(hotel_api_url: string,reservation_id:string) {
     let url = hotel_api_url + "/reservations?reserve_id=" + reservation_id
-    let token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ3NjA3YWVhMDdlOTQzNzA1MTdhNjEyNmExODRkMTI3MmE2OTY1OTEifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29ob3RlbHMtNWE1ODkiLCJuYW1lIjoiSkhPTkFUQU4gQUxFWMOBTkRFUiBPUk9aQ08gQkxBTkTDk04iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDQuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1IMUtVQjl6SGs2SS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFDTS9TZHRKTmlYSkhnNC9waG90by5qcGciLCJhdWQiOiJnb2hvdGVscy01YTU4OSIsImF1dGhfdGltZSI6MTUxMTYwMjMxMCwidXNlcl9pZCI6IlV3VUhIQlNmRmRiaXdWQ08wSWU5eVFmdXpkSTMiLCJzdWIiOiJVd1VISEJTZkZkYml3VkNPMEllOXlRZnV6ZEkzIiwiaWF0IjoxNTExNjAyMzEwLCJleHAiOjE1MTE2MDU5MTAsImVtYWlsIjoiamhvbmF0YW5hLm9yb3pjb0B1ZGVhLmVkdS5jbyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTEzMzIxMjQ1NjE2NzI1OTA3NjY3Il0sImVtYWlsIjpbImpob25hdGFuYS5vcm96Y29AdWRlYS5lZHUuY28iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.jx94xqItoNWQegJGlt9RLUnDjOia_LAM1intGiWc_bvj89VENTrpOMK5_bLNuiT0SN4HMSErfWndc1ei45V1AAv_qsU-NTDOC4_6ZVMSUOgVqHbZ0wLjYmJiMO8nG4d-NGQPD9uBpbgzn5EUok8Cowsyanu6WrvomCwLKoucUVTWQxDuTsPlf8viVjrHm4hB5WMdixxZ4B0B8ol-hm_28ESP-sSqFc9QSoyEGvsc6pDwqbGRrMNbpJnEFErniY_VgCoFA22-eTbAXHPUbIiF2XCBZ1xJwiBpXvSp69HCfU9W63pcpYudDTwzX9R7UsaMQnZLmQHVj6gNN8PuC1DF3w";
+    let token = this.token;
     let headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     headers.append('Accept', 'application/json');
