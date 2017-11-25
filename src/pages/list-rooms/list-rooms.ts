@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
 import { DetailPage } from '../detail/detail';
-import { API_GO, API_NODE, API_SCALA, API_PYTHON } from '../../global'
+import { API_GO, API_NODE, API_SCALA_DEV, API_PYTHON, API_NODE_DEV} from '../../global'
 import { HomePage } from '../home/home';
 
 @IonicPage()
@@ -17,7 +17,7 @@ export class ListRoomsPage {
   hotels_response: any = []
   onlyRooms = []
 
-  hotels_names = [API_NODE, API_PYTHON, API_GO, API_SCALA]
+  hotels_names = [API_NODE_DEV, API_PYTHON, API_GO, API_SCALA_DEV]
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private _hotelzProvider: HotelzProvider, private  alertCtrl: AlertController) {
@@ -48,7 +48,7 @@ export class ListRoomsPage {
         alert.present();
         
         })
-        break;
+        
       }
     });
   }
