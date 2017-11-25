@@ -98,6 +98,8 @@ export class MyReservationsPage {
   }
 
   showDetail(reservation) {
+    console.log(reservation);
+    
     this.navCtrl.push(CancelReservationPage, {"reservation": reservation});
   }
 

@@ -21,16 +21,18 @@ export class CancelReservationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private _hotelzProvider: HotelzProvider, private  alertCtrl: AlertController) {
-
+      this.reservation = this.navParams.get('reservation');
   }
 
-  ionViewDidLoad() {
-    this.reservation = this.navParams.get('reservation');
+  ionViewDidEnter() {
+    //this.reservation = this.navParams.get('reservation');
+    console.log(this.reservation);
+    
   }
 
   cancel() {
     let hotel_api_url = this.reservation.hotel_info.hotel_api_url
-    this._hotelzProvider.doReserve(hotel_api_url, this.reservation.reserve_id).then((response) => {
+    this._hotelzProvider.cancelReservation(hotel_api_url, this.reservation.reserve_id).then((response) => {
       const alert = this.alertCtrl.create({
         title: 'Operación exitosa!',
         subTitle: 'Su reserva ha sido cancelada',
