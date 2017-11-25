@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HotelzProvider } from '../../providers/hotelz/hotelz';
-import { API_SCALA_DEV, API_NODE_DEV } from '../../global'
+import { API_SCALA_DEV, API_NODE_DEV, API_GO_DEV } from '../../global'
 import { CancelReservationPage } from '../cancel-reservation/cancel-reservation';
 
 /**
@@ -20,7 +20,7 @@ export class MyReservationsPage {
 
   hotels_response: any = [];
   myReservations: any = [];
-  hotels_names = [API_SCALA_DEV, API_NODE_DEV]
+  hotels_names = [API_SCALA_DEV, API_NODE_DEV, API_GO_DEV]
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _hotelzProvider: HotelzProvider) {
 
