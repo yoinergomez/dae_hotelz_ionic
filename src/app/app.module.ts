@@ -15,6 +15,8 @@ import { MyProfilePage } from '../pages/my-profile/my-profile';
 import { MyReservationsPage } from '../pages/my-reservations/my-reservations';
 import { LoginPage } from "../pages/login/login";
 
+import { LoginPageModule } from "../pages/login/login.module";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,12 +26,12 @@ import { LoginPage } from "../pages/login/login";
     DetailPage,
     MyProfilePage,
     MyReservationsPage,
-    LoginPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    LoginPageModule,
     HttpModule
   ],
   bootstrap: [IonicApp],
