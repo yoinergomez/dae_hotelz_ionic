@@ -74,7 +74,7 @@ export class AuthServiceProvider {
         });
       } else {
         // Desktop
-        resolve(localStorage.getItem("session"));
+        resolve(JSON.parse(localStorage.getItem("session")));
       }
       resolve(null);
     });

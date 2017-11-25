@@ -70,7 +70,7 @@ export class MyProfilePage {
       console.log(status);
       this._authService.getUserInformation().then(session => {
         console.log('session');
-        console.log(session);
+        console.log(session.email);
       });
     });
   }
